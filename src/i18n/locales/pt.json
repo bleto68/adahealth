@@ -1,0 +1,232 @@
+{
+  "nav": {
+    "home": "InÃ­cio",
+    "checkStake": "Verificar Stake",
+    "leaderboard": "ClassificaÃ§Ã£o",
+    "about": "Sobre NÃ³s",
+    "walletDemo": "Demo Carteira"
+  },
+  "home": {
+    "hero": {
+      "badge": "Plataforma de TransparÃªncia Independente",
+      "title": "Protegendo Delegadores Cardano AtravÃ©s da TransparÃªncia",
+      "subtitle": "â‚³86M bloqueados em pools retirados. 47.000+ carteiras nÃ£o ganham recompensas. Verifique se o seu stake estÃ¡ afetado.",
+      "cta": "Verifique Seu Stake",
+      "secondary": "Ver ClassificaÃ§Ã£o"
+    },
+    "stats": {
+      "lost": "ADA Perdidos em Pools Retirados",
+      "affected": "Carteiras Afetadas",
+      "transparent": "TransparÃªncia"
+    },
+    "features": {
+      "title": "Por Que ADAHealth Ã‰ Importante",
+      "subtitle": "Fornecemos as ferramentas e transparÃªncia necessÃ¡rias para proteger seu stake",
+      "check": {
+        "title": "VerificaÃ§Ã£o InstantÃ¢nea de Stake",
+        "description": "Verifique qualquer endereÃ§o de carteira em segundos para verificar o status do pool e histÃ³rico de recompensas"
+      },
+      "transparency": {
+        "title": "TransparÃªncia Completa",
+        "description": "Dados abertos sobre todos os pools retirados e delegadores afetados"
+      },
+      "community": {
+        "title": "Orientado pela Comunidade",
+        "description": "Plataforma independente construÃ­da para a comunidade Cardano"
+      }
+    },
+    "cta": {
+      "check": {
+        "title": "Verifique Seu Stake Agora",
+        "description": "Insira seu endereÃ§o de carteira para verificar se seu pool estÃ¡ ativo e ganhando recompensas",
+        "button": "Iniciar VerificaÃ§Ã£o"
+      }
+    }
+  },
+  "check": {
+    "title": "Verifique Seu Stake",
+    "subtitle": "Verifique seu status de delegaÃ§Ã£o e garanta que estÃ¡ ganhando recompensas",
+    "form": {
+      "title": "Insira o EndereÃ§o da Carteira",
+      "description": "Verificaremos se seu stake estÃ¡ delegado a um pool ativo",
+      "placeholder": "stake1..."
+    },
+    "errors": {
+      "empty": "Por favor, insira um endereÃ§o de carteira",
+      "failed": "Falha ao obter informaÃ§Ãµes de stake"
+    },
+    "result": {
+      "pool": "Pool Delegado",
+      "stake": "Quantidade Apostada",
+      "lastReward": "Ãšltima Recompensa",
+      "active": {
+        "title": "Pool EstÃ¡ Ativo"
+      },
+      "retired": {
+        "title": "Aviso: Pool EstÃ¡ Retirado",
+        "warning": "Este pool nÃ£o estÃ¡ mais produzindo blocos. VocÃª deve redelegir para um pool ativo para retomar o ganho de recompensas."
+      }
+    }
+  },
+  "leaderboard": {
+    "title": "ClassificaÃ§Ã£o de Pools Retirados",
+    "subtitle": "Rastreamento do impacto de pools retirados no ecossistema Cardano",
+    "stats": {
+      "totalLocked": "Total ADA Bloqueado",
+      "affectedWallets": "Carteiras Afetadas",
+      "retiredPools": "Pools Retirados"
+    },
+    "wallets": "carteiras"
+  },
+  "poolDetail": {
+    "notFound": "Pool nÃ£o encontrado",
+    "back": "Voltar Ã  ClassificaÃ§Ã£o",
+    "stats": {
+      "locked": "ADA Bloqueado",
+      "wallets": "Carteiras Afetadas",
+      "retired": "Data de Retirada",
+      "lastEpoch": "Ãšltima Ã‰poca Ativa"
+    },
+    "chart": {
+      "title": "Stake HistÃ³rico"
+    },
+    "warning": {
+      "title": "Aviso de Retirada do Pool",
+      "description": "Este pool foi retirado e nÃ£o estÃ¡ mais produzindo blocos. Os delegadores devem mover seu stake para um pool ativo."
+    }
+  },
+  "about": {
+    "title": "Sobre ADAHealth",
+    "subtitle": "TransparÃªncia independente para o ecossistema Cardano",
+    "mission": {
+      "title": "Nossa MissÃ£o",
+      "paragraph1": "ADAHealth Ã© uma plataforma independente dedicada a proteger delegadores Cardano fornecendo transparÃªncia sobre pools de stake retirados.",
+      "paragraph2": "Quando um pool de stake se retira sem que os delegadores movam seu stake, esses delegadores param de ganhar recompensas. Atualmente, mais de â‚³86 milhÃµes de ADA estÃ£o bloqueados em pools retirados, afetando mais de 47.000 carteiras.",
+      "paragraph3": "ConstruÃ­mos ADAHealth para dar Ã  comunidade acesso fÃ¡cil a essas informaÃ§Ãµes crÃ­ticas, ajudando delegadores a proteger seu stake e maximizar suas recompensas."
+    },
+    "values": {
+      "title": "Nossos Valores",
+      "transparency": {
+        "title": "TransparÃªncia Primeiro",
+        "description": "Todos os dados vÃªm da blockchain Cardano e estÃ£o livremente disponÃ­veis"
+      },
+      "community": {
+        "title": "Orientado pela Comunidade",
+        "description": "ConstruÃ­do pela comunidade, para a comunidade, sem agendas ocultas"
+      },
+      "accuracy": {
+        "title": "PrecisÃ£o de Dados",
+        "description": "Dados em tempo real de fontes blockchain confiÃ¡veis"
+      },
+      "independence": {
+        "title": "Independente",
+        "description": "NÃ£o afiliado a nenhum pool de stake ou entidade comercial"
+      }
+    },
+    "team": {
+      "title": "Entre em Contato",
+      "description": "ADAHealth Ã© mantido por membros da comunidade Cardano apaixonados por transparÃªncia e proteÃ§Ã£o de delegadores.",
+      "contact": "Tem perguntas ou sugestÃµes? Entre em contato conosco no Twitter ou GitHub."
+    }
+  },
+  "walletDemo": {
+    "title": "Demo de ConexÃ£o de Carteira",
+    "subtitle": "Teste recursos de conectividade de carteira",
+    "info": {
+      "title": "Sobre Esta Demo",
+      "subtitle": "Explore capacidades de integraÃ§Ã£o de carteira"
+    },
+    "features": {
+      "title": "Recursos",
+      "feature1": "Conecte-se a carteiras Cardano (Nami, Eternl, Yoroi, etc.)",
+      "feature2": "Ver endereÃ§o e saldo da carteira",
+      "feature3": "Verificar status de delegaÃ§Ã£o",
+      "feature4": "ConexÃ£o segura com padrÃ£o CIP-30"
+    },
+    "note": {
+      "title": "Nota:",
+      "description": "Esta Ã© uma pÃ¡gina de demonstraÃ§Ã£o. IntegraÃ§Ã£o completa de carteira requer configuraÃ§Ã£o de API blockchain."
+    },
+    "supported": {
+      "title": "Carteiras Suportadas"
+    }
+  },
+  "wallet": {
+    "title": "Conectar Carteira",
+    "description": "Conecte sua carteira Cardano para verificar seu status de delegaÃ§Ã£o",
+    "connect": "Conectar Carteira",
+    "connecting": "Conectando...",
+    "connected": "Carteira Conectada",
+    "disconnect": "Desconectar",
+    "address": "EndereÃ§o da Carteira",
+    "error": "Falha ao conectar carteira",
+    "supported": "Carteiras suportadas: Nami, Eternl, Yoroi, Flint, Gero, Typhon"
+  },
+  "advertise": {
+    "title": "Anuncie no ADAHealth",
+    "subtitle": "Alcance delegadores Cardano engajados e operadores de stake pool",
+    "description": "Promova seu stake pool, dApp ou serviÃ§o Cardano para nossa comunidade",
+    "benefit1": "PÃºblico-alvo de delegadores Cardano ativos",
+    "benefit2": "Posicionamento de banner premium em todas as pÃ¡ginas",
+    "benefit3": "PreÃ§os transparentes e mÃ©tricas de desempenho",
+    "cta": "ComeÃ§ar a Anunciar",
+    "benefits": {
+      "targeted": {
+        "title": "PÃºblico-Alvo",
+        "description": "Alcance delegadores Cardano ativos tomando decisÃµes de staking"
+      },
+      "visibility": {
+        "title": "Alta Visibilidade",
+        "description": "Posicionamento de banner em todas as pÃ¡ginas com milhares de visitantes mensais"
+      },
+      "affordable": {
+        "title": "Tarifas AcessÃ­veis",
+        "description": "PreÃ§os competitivos com modelo pay-per-impression"
+      }
+    },
+    "form": {
+      "title": "Criar AnÃºncio",
+      "description": "Preencha o formulÃ¡rio abaixo para iniciar sua campanha",
+      "adTitle": "TÃ­tulo do AnÃºncio",
+      "adTitlePlaceholder": "Nome do seu stake pool ou serviÃ§o",
+      "description": "DescriÃ§Ã£o",
+      "descriptionPlaceholder": "Breve descriÃ§Ã£o (mÃ¡x 100 caracteres)",
+      "url": "URL de Destino",
+      "image": "URL da Imagem (opcional)",
+      "imageHint": "Recomendado: 400x400px, mÃ¡x 200KB",
+      "budget": "OrÃ§amento (ADA)",
+      "budgetHint": "MÃ­nimo 100 ADA",
+      "duration": "DuraÃ§Ã£o da Campanha",
+      "days": "dias",
+      "estimate": "Alcance Estimado",
+      "estimateDescription": "Com base no seu orÃ§amento, estimamos ~50.000 impressÃµes durante o perÃ­odo selecionado",
+      "submit": "LanÃ§ar Campanha"
+    }
+  },
+  "adAdmin": {
+    "title": "Painel de Campanha PublicitÃ¡ria",
+    "subtitle": "Monitore suas campanhas publicitÃ¡rias",
+    "stats": {
+      "impressions": "ImpressÃµes Totais",
+      "clicks": "Cliques Totais",
+      "spent": "Gasto Total"
+    },
+    "actions": {
+      "pause": "Pausar",
+      "resume": "Retomar",
+      "edit": "Editar",
+      "delete": "Excluir"
+    }
+  },
+  "footer": {
+    "tagline": "Protegendo delegadores Cardano atravÃ©s da transparÃªncia",
+    "quickLinks": "Links RÃ¡pidos",
+    "resources": "Recursos",
+    "documentation": "DocumentaÃ§Ã£o",
+    "advertise": "Anunciar",
+    "community": "Comunidade",
+    "rights": "Todos os direitos reservados.",
+    "privacy": "PolÃ­tica de Privacidade",
+    "terms": "Termos de ServiÃ§o"
+  }
+}
