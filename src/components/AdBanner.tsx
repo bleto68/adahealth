@@ -72,21 +72,21 @@ export default function AdBanner() {
               className="bg-white text-blue-600 hover:bg-blue-50"
             >
               <a
-                href={currentAd.targetUrl}
+                href={currentAd.target_url}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2"
               >
-                Visit {currentAd.advertiserName}
+                Visit {currentAd.advertiser_name}
                 <ExternalLink className="w-4 h-4" />
               </a>
             </Button>
           </div>
 
-          {currentAd.imageUrl && (
+          {currentAd.image_url && (
             <div className="hidden md:block flex-shrink-0">
               <img
-                src={currentAd.imageUrl}
+                src={currentAd.image_url}
                 alt={currentAd.title}
                 className="w-32 h-32 object-cover rounded-xl shadow-lg"
               />
