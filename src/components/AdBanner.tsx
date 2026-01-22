@@ -1,68 +1,136 @@
 import { useEffect, useState } from 'react';
-import { X } from 'lucide-react';
-import { Button } from './ui/button';
-import { getActiveAds } from '@/lib/ads';
-
-interface Ad {
-  id: string;
-  title: string;
-  description: string;
-  url: string;
-  image_url?: string;
-}
+import { ChevronLeft, ChevronRight, ExternalLink } from 'lucide-react';
+import { getActiveAds, type Advertisement } from '@/lib/ads';
+import { Button } from '@/components/ui/button';
 
 export default function AdBanner() {
-  const [ad, setAd] = useState<Ad | null>(null);
-  const [isVisible, setIsVisible] = useState(true);
+  const [ads, setAds] = useState<Advertisement[]>([]);
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    loadAd();
+    loadAds();
   }, []);
 
-  const loadAd = async () => {
-    const ads = await getActiveAds();
-    if (ads.length > 0) {
-      // Rotate through ads or pick random
-      const randomAd = ads[Math.floor(Math.random() * ads.length)];
-      setAd(randomAd);
+  const loadAds = async () => {
+    try {
+      setLoading(true);
+      const activeAds = await getActiveAds();
+      setAds(activeAds);
+    } catch (error) {
+      console.error('Error loading ads:', error);
+      setAds([]);
+    } finally {
+      setLoading(false);
     }
   };
 
-  if (!ad || !isVisible) return null;
+  useEffect(() => {
+    if (ads.length <= 1) return;
+    const timer = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % ads.length);
+    }, 8000);
+    return () => clearInterval(timer);
+  }, [ads.length]);
+
+  const nextAd = () => {
+    setCurrentIndex((prev) => (prev + 1) % ads.length);
+  };
+
+  const prevAd = () => {
+    setCurrentIndex((prev) => (prev - 1 + ads.length) % ads.length);
+  };
+
+  if (loading) {
+    return (
+      <div className="w-full bg-gradient-to-r from-blue-600 to-blue-700 rounded-2xl p-8 animate-pulse">
+        <div className="h-24 bg-white/10 rounded-lg" />
+      </div>
+    );
+  }
+
+  if (ads.length === 0) {
+    return null;
+  }
+
+  const currentAd = ads[currentIndex];
 
   return (
-    <div className="bg-gradient-to-r from-primary/10 via-secondary/10 to-accent/10 border-b border-border/40">
-      <div className="container mx-auto px-4 py-3">
-        <div className="flex items-center justify-between gap-4">
-          <a
-            href={ad.url}
-            target="_blank"
-            rel="noopener noreferrer sponsored"
-            className="flex items-center gap-4 flex-1 hover:opacity-80 transition-opacity"
-          >
-            {ad.image_url && (
+    <div className="w-full bg-gradient-to-r from-blue-600 to-blue-700 rounded-2xl overflow-hidden shadow-xl">
+      <div className="p-6 md:p-8 relative">
+        <div className="flex items-center justify-between gap-6">
+          <div className="flex-1 min-w-0">
+            <h3 className="text-xl md:text-2xl font-bold text-white mb-2 truncate">
+              {currentAd.title}
+            </h3>
+            <p className="text-blue-100 text-sm md:text-base mb-4 line-clamp-2">
+              {currentAd.description}
+            </p>
+            <Button
+              asChild
+              size="lg"
+              className="bg-white text-blue-600 hover:bg-blue-50"
+            >
+              <a
+                href={currentAd.targetUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2"
+              >
+                Visit {currentAd.advertiserName}
+                <ExternalLink className="w-4 h-4" />
+              </a>
+            </Button>
+          </div>
+
+          {currentAd.imageUrl && (
+            <div className="hidden md:block flex-shrink-0">
               <img
-                src={ad.image_url}
-                alt={ad.title}
-                className="h-12 w-12 rounded object-cover"
+                src={currentAd.imageUrl}
+                alt={currentAd.title}
+                className="w-32 h-32 object-cover rounded-xl shadow-lg"
               />
-            )}
-            <div className="flex-1">
-              <p className="text-sm font-semibold">{ad.title}</p>
-              <p className="text-xs text-muted-foreground">{ad.description}</p>
             </div>
-            <span className="text-xs text-muted-foreground px-2 py-1 bg-muted rounded">
-              Ad
-            </span>
-          </a>
-          <Button
-            variant="ghost"
-            size="icon"
-            className="h-8 w-8 shrink-0"
-            onClick={() => setIsVisible(false)}
+          )}
+        </div>
+
+        {ads.length > 1 && (
+          <button
+            onClick={prevAd}
+            className="absolute left-2 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/30 rounded-full p-2 transition-colors"
+            aria-label="Previous ad"
           >
-            <X className="h-4 w-4" />
-          </Button>
+            <ChevronLeft className="w-5 h-5 text-white" />
+          </button>
+        )}
+
+        {ads.length > 1 && (
+          <button
+            onClick={nextAd}
+            className="absolute right-2 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/30 rounded-full p-2 transition-colors"
+            aria-label="Next ad"
+          >
+            <ChevronRight className="w-5 h-5 text-white" />
+          </button>
+        )}
+
+        {ads.length > 1 && (
+          <div className="flex justify-center gap-2 mt-3">
+            {ads.map((_, idx) => (
+              <button
+                key={idx}
+                onClick={() => setCurrentIndex(idx)}
+                className={`w-2 h-2 rounded-full transition-all ${
+                  idx === currentIndex ? 'bg-white w-6' : 'bg-white/40 hover:bg-white/60'
+                }`}
+                aria-label={`Go to ad ${idx + 1}`}
+              />
+            ))}
+          </div>
+        )}
+
+        <div className="text-center mt-2">
+          <span className="text-xs text-white/60">Sponsored</span>
         </div>
       </div>
     </div>

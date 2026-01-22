@@ -1,43 +1,35 @@
 import { Link } from 'react-router-dom';
-import { Megaphone } from 'lucide-react';
-import { Button } from './ui/button';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/card';
+import { Megaphone, ArrowRight } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
+import { Button } from '@/components/ui/button';
+import { Card, CardContent } from '@/components/ui/card';
 
 export default function AdvertiseCTA() {
   const { t } = useTranslation();
-
+  
   return (
-    <Card className="glass-card border-primary/20">
-      <CardHeader>
-        <CardTitle className="flex items-center gap-2">
-          <Megaphone className="h-5 w-5 text-primary" />
-          {t('advertise.title')}
-        </CardTitle>
-        <CardDescription>{t('advertise.description')}</CardDescription>
-      </CardHeader>
-      <CardContent>
-        <div className="space-y-4">
-          <ul className="space-y-2 text-sm text-muted-foreground">
-            <li className="flex items-center gap-2">
-              <div className="h-1.5 w-1.5 rounded-full bg-primary" />
-              {t('advertise.benefit1')}
-            </li>
-            <li className="flex items-center gap-2">
-              <div className="h-1.5 w-1.5 rounded-full bg-secondary" />
-              {t('advertise.benefit2')}
-            </li>
-            <li className="flex items-center gap-2">
-              <div className="h-1.5 w-1.5 rounded-full bg-accent" />
-              {t('advertise.benefit3')}
-            </li>
-          </ul>
-          <Button asChild className="w-full">
-            <Link to="/advertise">
-              <Megaphone className="mr-2 h-4 w-4" />
-              {t('advertise.cta')}
-            </Link>
-          </Button>
+    <Card className="bg-gradient-to-br from-purple-50 to-blue-50 border-purple-200">
+      <CardContent className="p-6">
+        <div className="flex items-start gap-4">
+          <div className="w-12 h-12 rounded-xl bg-purple-600 flex items-center justify-center flex-shrink-0">
+            <Megaphone className="w-6 h-6 text-white" />
+          </div>
+          
+          <div className="flex-1">
+            <h3 className="text-lg font-semibold mb-2">
+              {t('advertise.ctaTitle')}
+            </h3>
+            <p className="text-sm text-muted-foreground mb-4">
+              {t('advertise.ctaDesc')}
+            </p>
+            
+            <Button asChild size="sm" className="gap-2">
+              <Link to="/advertise">
+                {t('advertise.ctaButton')}
+                <ArrowRight className="w-4 h-4" />
+              </Link>
+            </Button>
+          </div>
         </div>
       </CardContent>
     </Card>
