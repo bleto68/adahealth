@@ -62,25 +62,29 @@ export default function AdBanner() {
           <div className="flex-1 min-w-0">
             <div className="flex items-center gap-3 mb-2">
               <span className="px-3 py-1 bg-white/20 rounded-full text-white font-mono text-sm font-semibold">
-                {currentAd.poolTicker}
+                [{currentAd.poolTicker}]
               </span>
             </div>
+            
             <h3 className="text-xl md:text-2xl font-bold text-white mb-2">
               {currentAd.poolName}
             </h3>
+            
             <p className="text-blue-100 text-sm md:text-base mb-3">
               {currentAd.tagline}
             </p>
+            
             <div className="flex flex-wrap gap-2 mb-4">
               {currentAd.features.map((feature, idx) => (
                 <span
                   key={idx}
                   className="px-2 py-1 bg-white/10 rounded text-white text-xs"
                 >
-                  {feature}
+                  ✓ {feature}
                 </span>
               ))}
             </div>
+            
             {currentAd.websiteUrl && (
               <Button
                 asChild
@@ -102,7 +106,7 @@ export default function AdBanner() {
         </div>
 
         {ads.length > 1 && (
-          <>
+          <div>
             <button
               onClick={prevAd}
               className="absolute left-2 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/30 rounded-full p-2 transition-colors"
@@ -117,7 +121,7 @@ export default function AdBanner() {
             >
               <ChevronRight className="w-5 h-5 text-white" />
             </button>
-          </>
+          </div>
         )}
 
         {ads.length > 1 && (
@@ -136,7 +140,7 @@ export default function AdBanner() {
         )}
 
         <div className="text-center mt-2">
-          <span className="text-xs text-white/60">Sponsored Pool</span>
+          <span className="text-xs text-white/60">Sponsored</span>
         </div>
       </div>
     </div>
