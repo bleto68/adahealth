@@ -1,232 +1,233 @@
-{
-  "nav": {
-    "home": "Home",
-    "checkStake": "Controleer Stake",
-    "leaderboard": "Klassement",
-    "about": "Over Ons",
-    "walletDemo": "Wallet Demo"
-  },
-  "home": {
-    "hero": {
-      "badge": "Onafhankelijk Transparantieplatform",
-      "title": "Bescherming van Cardano Delegators door Transparantie",
-      "subtitle": "â‚³86M vast in gepensioneerde pools. 47.000+ wallets verdienen geen beloningen. Controleer of jouw stake wordt beÃ¯nvloed.",
-      "cta": "Controleer Je Stake",
-      "secondary": "Bekijk Klassement"
-    },
-    "stats": {
-      "lost": "ADA Verloren aan Gepensioneerde Pools",
-      "affected": "Getroffen Wallets",
-      "transparent": "Transparantie"
-    },
-    "features": {
-      "title": "Waarom ADAHealth Belangrijk Is",
-      "subtitle": "We bieden de tools en transparantie die je nodig hebt om je stake te beschermen",
-      "check": {
-        "title": "Directe Stake Verificatie",
-        "description": "Controleer elk wallet-adres in seconden om poolstatus en beloningsgeschiedenis te verifiÃ«ren"
-      },
-      "transparency": {
-        "title": "Volledige Transparantie",
-        "description": "Open gegevens over alle gepensioneerde pools en getroffen delegators"
-      },
-      "community": {
-        "title": "Community-Gedreven",
-        "description": "Onafhankelijk platform gebouwd voor de Cardano-gemeenschap"
-      }
-    },
-    "cta": {
-      "check": {
-        "title": "Controleer Nu Je Stake",
-        "description": "Voer je wallet-adres in om te verifiÃ«ren dat je pool actief is en beloningen verdient",
-        "button": "Begin Controleren"
-      }
-    }
-  },
-  "check": {
-    "title": "Controleer Je Stake",
-    "subtitle": "Verifieer je delegatiestatus en zorg ervoor dat je beloningen verdient",
-    "form": {
-      "title": "Voer Wallet-Adres In",
-      "description": "We controleren of je stake is gedelegeerd naar een actieve pool",
-      "placeholder": "stake1..."
-    },
-    "errors": {
-      "empty": "Voer een wallet-adres in",
-      "failed": "Kan stake-informatie niet ophalen"
-    },
-    "result": {
-      "pool": "Gedelegeerde Pool",
-      "stake": "Gestaakt Bedrag",
-      "lastReward": "Laatste Beloning",
-      "active": {
-        "title": "Pool is Actief"
-      },
-      "retired": {
-        "title": "Waarschuwing: Pool is Gepensioneerd",
-        "warning": "Deze pool produceert geen blokken meer. Je zou moeten opnieuw delegeren naar een actieve pool om weer beloningen te verdienen."
-      }
-    }
-  },
-  "leaderboard": {
-    "title": "Klassement Gepensioneerde Pools",
-    "subtitle": "Tracking van de impact van gepensioneerde pools op het Cardano-ecosysteem",
-    "stats": {
-      "totalLocked": "Totaal ADA Vast",
-      "affectedWallets": "Getroffen Wallets",
-      "retiredPools": "Gepensioneerde Pools"
-    },
-    "wallets": "wallets"
-  },
-  "poolDetail": {
-    "notFound": "Pool niet gevonden",
-    "back": "Terug naar Klassement",
-    "stats": {
-      "locked": "Vastgezette ADA",
-      "wallets": "Getroffen Wallets",
-      "retired": "Pensioendatum",
-      "lastEpoch": "Laatste Actieve Epoch"
-    },
-    "chart": {
-      "title": "Historische Stake"
-    },
-    "warning": {
-      "title": "Pool Pensioenmelding",
-      "description": "Deze pool is gepensioneerd en produceert geen blokken meer. Delegators moeten hun stake verplaatsen naar een actieve pool."
-    }
-  },
-  "about": {
-    "title": "Over ADAHealth",
-    "subtitle": "Onafhankelijke transparantie voor het Cardano-ecosysteem",
-    "mission": {
-      "title": "Onze Missie",
-      "paragraph1": "ADAHealth is een onafhankelijk platform gewijd aan het beschermen van Cardano-delegators door transparantie te bieden over gepensioneerde stake pools.",
-      "paragraph2": "Wanneer een stake pool met pensioen gaat zonder dat delegators hun stake verplaatsen, stoppen die delegators met het verdienen van beloningen. Momenteel zit er meer dan â‚³86 miljoen ADA vast in gepensioneerde pools, wat meer dan 47.000 wallets treft.",
-      "paragraph3": "We hebben ADAHealth gebouwd om de gemeenschap gemakkelijke toegang te geven tot deze cruciale informatie, waardoor delegators hun stake kunnen beschermen en hun beloningen kunnen maximaliseren."
-    },
-    "values": {
-      "title": "Onze Waarden",
-      "transparency": {
-        "title": "Transparantie Eerst",
-        "description": "Alle gegevens komen van de Cardano-blockchain en zijn vrij beschikbaar"
-      },
-      "community": {
-        "title": "Community Gedreven",
-        "description": "Gebouwd door de gemeenschap, voor de gemeenschap, zonder verborgen agenda's"
-      },
-      "accuracy": {
-        "title": "Data Nauwkeurigheid",
-        "description": "Real-time gegevens van betrouwbare blockchain-bronnen"
-      },
-      "independence": {
-        "title": "Onafhankelijk",
-        "description": "Niet gelieerd aan enige stake pool of commerciÃ«le entiteit"
-      }
-    },
-    "team": {
-      "title": "Neem Contact Op",
-      "description": "ADAHealth wordt onderhouden door Cardano-gemeenschapsleden die gepassioneerd zijn over transparantie en delegator-bescherming.",
-      "contact": "Heb je vragen of suggesties? Neem contact met ons op via Twitter of GitHub."
-    }
-  },
-  "walletDemo": {
-    "title": "Wallet Verbinding Demo",
-    "subtitle": "Test wallet-connectiviteitsfuncties",
-    "info": {
-      "title": "Over Deze Demo",
-      "subtitle": "Verken wallet-integratiemogelijkheden"
-    },
-    "features": {
-      "title": "Functies",
-      "feature1": "Verbind met Cardano-wallets (Nami, Eternl, Yoroi, etc.)",
-      "feature2": "Bekijk wallet-adres en saldo",
-      "feature3": "Controleer delegatiestatus",
-      "feature4": "Veilige verbinding met CIP-30-standaard"
-    },
-    "note": {
-      "title": "Opmerking:",
-      "description": "Dit is een demonstratiepagina. Volledige wallet-integratie vereist blockchain API-setup."
-    },
-    "supported": {
-      "title": "Ondersteunde Wallets"
-    }
-  },
-  "wallet": {
-    "title": "Verbind Wallet",
-    "description": "Verbind je Cardano-wallet om je delegatiestatus te controleren",
-    "connect": "Verbind Wallet",
-    "connecting": "Verbinden...",
-    "connected": "Wallet Verbonden",
-    "disconnect": "Verbreek Verbinding",
-    "address": "Wallet-Adres",
-    "error": "Kan wallet niet verbinden",
-    "supported": "Ondersteunde wallets: Nami, Eternl, Yoroi, Flint, Gero, Typhon"
-  },
-  "advertise": {
-    "title": "Adverteer op ADAHealth",
-    "subtitle": "Bereik betrokken Cardano-delegators en stake pool-operators",
-    "description": "Promoot je stake pool, dApp of Cardano-service bij onze gemeenschap",
-    "benefit1": "Gericht publiek van actieve Cardano-delegators",
-    "benefit2": "Premium bannerplaatsing op alle pagina's",
-    "benefit3": "Transparante prijzen en prestatiestatistieken",
-    "cta": "Begin Met Adverteren",
-    "benefits": {
-      "targeted": {
-        "title": "Gericht Publiek",
-        "description": "Bereik actieve Cardano-delegators die staking-beslissingen nemen"
-      },
-      "visibility": {
-        "title": "Hoge Zichtbaarheid",
-        "description": "Bannerplaatsing op alle pagina's met duizenden maandelijkse bezoekers"
-      },
-      "affordable": {
-        "title": "Betaalbare Tarieven",
-        "description": "Concurrerende prijzen met pay-per-impression-model"
-      }
-    },
-    "form": {
-      "title": "Maak Advertentie",
-      "description": "Vul het onderstaande formulier in om je campagne te starten",
-      "adTitle": "Advertentie Titel",
-      "adTitlePlaceholder": "Je stake pool of servicenaam",
-      "description": "Beschrijving",
-      "descriptionPlaceholder": "Korte beschrijving (max 100 tekens)",
-      "url": "Bestemmings-URL",
-      "image": "Afbeeldings-URL (optioneel)",
-      "imageHint": "Aanbevolen: 400x400px, max 200KB",
-      "budget": "Budget (ADA)",
-      "budgetHint": "Minimum 100 ADA",
-      "duration": "Campagneduur",
-      "days": "dagen",
-      "estimate": "Geschat Bereik",
-      "estimateDescription": "Op basis van je budget schatten we ~50.000 vertoningen over de geselecteerde periode",
-      "submit": "Start Campagne"
-    }
-  },
-  "adAdmin": {
-    "title": "Advertentiecampagne Dashboard",
-    "subtitle": "Monitor je advertentiecampagnes",
-    "stats": {
-      "impressions": "Totaal Vertoningen",
-      "clicks": "Totaal Klikken",
-      "spent": "Totaal Uitgegeven"
-    },
-    "actions": {
-      "pause": "Pauzeren",
-      "resume": "Hervatten",
-      "edit": "Bewerken",
-      "delete": "Verwijderen"
-    }
-  },
-  "footer": {
-    "tagline": "Bescherming van Cardano-delegators door transparantie",
-    "quickLinks": "Snelle Links",
-    "resources": "Resources",
-    "documentation": "Documentatie",
-    "advertise": "Adverteer",
-    "community": "Gemeenschap",
-    "rights": "Alle rechten voorbehouden.",
-    "privacy": "Privacybeleid",
-    "terms": "Servicevoorwaarden"
-  }
+﻿{
+    "nav":  {
+                "home":  "Home",
+                "checkStake":  "Controleer Stake",
+                "leaderboard":  "Klassement",
+                "about":  "Over Ons",
+                "walletDemo":  "Wallet Demo"
+            },
+    "home":  {
+                 "hero":  {
+                              "badge":  "Onafhankelijk Transparantieplatform",
+                              "title":  "Bescherming van Cardano Delegators door Transparantie",
+                              "subtitle":  "â‚³86M vast in gepensioneerde pools. 47.000+ wallets verdienen geen beloningen. Controleer of jouw stake wordt beÃ¯nvloed.",
+                              "cta":  "Controleer Je Stake",
+                              "secondary":  "Bekijk Klassement"
+                          },
+                 "stats":  {
+                               "lost":  "ADA Verloren aan Gepensioneerde Pools",
+                               "affected":  "Getroffen Wallets",
+                               "transparent":  "Transparantie"
+                           },
+                 "features":  {
+                                  "title":  "Waarom ADAHealth Belangrijk Is",
+                                  "subtitle":  "We bieden de tools en transparantie die je nodig hebt om je stake te beschermen",
+                                  "check":  {
+                                                "title":  "Directe Stake Verificatie",
+                                                "description":  "Controleer elk wallet-adres in seconden om poolstatus en beloningsgeschiedenis te verifiÃ«ren"
+                                            },
+                                  "transparency":  {
+                                                       "title":  "Volledige Transparantie",
+                                                       "description":  "Open gegevens over alle gepensioneerde pools en getroffen delegators"
+                                                   },
+                                  "community":  {
+                                                    "title":  "Community-Gedreven",
+                                                    "description":  "Onafhankelijk platform gebouwd voor de Cardano-gemeenschap"
+                                                }
+                              },
+                 "cta":  {
+                             "check":  {
+                                           "title":  "Controleer Nu Je Stake",
+                                           "description":  "Voer je wallet-adres in om te verifiÃ«ren dat je pool actief is en beloningen verdient",
+                                           "button":  "Begin Controleren"
+                                       }
+                         }
+             },
+    "check":  {
+                  "title":  "Controleer Je Stake",
+                  "subtitle":  "Verifieer je delegatiestatus en zorg ervoor dat je beloningen verdient",
+                  "form":  {
+                               "title":  "Voer Wallet-Adres In",
+                               "description":  "We controleren of je stake is gedelegeerd naar een actieve pool",
+                               "placeholder":  "stake1..."
+                           },
+                  "errors":  {
+                                 "empty":  "Voer een wallet-adres in",
+                                 "failed":  "Kan stake-informatie niet ophalen"
+                             },
+                  "result":  {
+                                 "pool":  "Gedelegeerde Pool",
+                                 "stake":  "Gestaakt Bedrag",
+                                 "lastReward":  "Laatste Beloning",
+                                 "active":  {
+                                                "title":  "Pool is Actief"
+                                            },
+                                 "retired":  {
+                                                 "title":  "Waarschuwing: Pool is Gepensioneerd",
+                                                 "warning":  "Deze pool produceert geen blokken meer. Je zou moeten opnieuw delegeren naar een actieve pool om weer beloningen te verdienen."
+                                             }
+                             }
+              },
+    "leaderboard":  {
+                        "title":  "Klassement Gepensioneerde Pools",
+                        "subtitle":  "Tracking van de impact van gepensioneerde pools op het Cardano-ecosysteem",
+                        "stats":  {
+                                      "totalLocked":  "Totaal ADA Vast",
+                                      "affectedWallets":  "Getroffen Wallets",
+                                      "retiredPools":  "Gepensioneerde Pools"
+                                  },
+                        "wallets":  "wallets"
+                    },
+    "poolDetail":  {
+                       "notFound":  "Pool niet gevonden",
+                       "back":  "Terug naar Klassement",
+                       "stats":  {
+                                     "locked":  "Vastgezette ADA",
+                                     "wallets":  "Getroffen Wallets",
+                                     "retired":  "Pensioendatum",
+                                     "lastEpoch":  "Laatste Actieve Epoch"
+                                 },
+                       "chart":  {
+                                     "title":  "Historische Stake"
+                                 },
+                       "warning":  {
+                                       "title":  "Pool Pensioenmelding",
+                                       "description":  "Deze pool is gepensioneerd en produceert geen blokken meer. Delegators moeten hun stake verplaatsen naar een actieve pool."
+                                   }
+                   },
+    "about":  {
+                  "title":  "Over ADAHealth",
+                  "subtitle":  "Onafhankelijke transparantie voor het Cardano-ecosysteem",
+                  "mission":  {
+                                  "title":  "Onze Missie",
+                                  "paragraph1":  "ADAHealth is een onafhankelijk platform gewijd aan het beschermen van Cardano-delegators door transparantie te bieden over gepensioneerde stake pools.",
+                                  "paragraph2":  "Wanneer een stake pool met pensioen gaat zonder dat delegators hun stake verplaatsen, stoppen die delegators met het verdienen van beloningen. Momenteel zit er meer dan â‚³86 miljoen ADA vast in gepensioneerde pools, wat meer dan 47.000 wallets treft.",
+                                  "paragraph3":  "We hebben ADAHealth gebouwd om de gemeenschap gemakkelijke toegang te geven tot deze cruciale informatie, waardoor delegators hun stake kunnen beschermen en hun beloningen kunnen maximaliseren."
+                              },
+                  "values":  {
+                                 "title":  "Onze Waarden",
+                                 "transparency":  {
+                                                      "title":  "Transparantie Eerst",
+                                                      "description":  "Alle gegevens komen van de Cardano-blockchain en zijn vrij beschikbaar"
+                                                  },
+                                 "community":  {
+                                                   "title":  "Community Gedreven",
+                                                   "description":  "Gebouwd door de gemeenschap, voor de gemeenschap, zonder verborgen agenda\u0027s"
+                                               },
+                                 "accuracy":  {
+                                                  "title":  "Data Nauwkeurigheid",
+                                                  "description":  "Real-time gegevens van betrouwbare blockchain-bronnen"
+                                              },
+                                 "independence":  {
+                                                      "title":  "Onafhankelijk",
+                                                      "description":  "Niet gelieerd aan enige stake pool of commerciÃ«le entiteit"
+                                                  }
+                             },
+                  "team":  {
+                               "title":  "Neem Contact Op",
+                               "description":  "ADAHealth wordt onderhouden door Cardano-gemeenschapsleden die gepassioneerd zijn over transparantie en delegator-bescherming.",
+                               "contact":  "Heb je vragen of suggesties? Neem contact met ons op via Twitter of GitHub."
+                           }
+              },
+    "walletDemo":  {
+                       "title":  "Wallet Verbinding Demo",
+                       "subtitle":  "Test wallet-connectiviteitsfuncties",
+                       "info":  {
+                                    "title":  "Over Deze Demo",
+                                    "subtitle":  "Verken wallet-integratiemogelijkheden"
+                                },
+                       "features":  {
+                                        "title":  "Functies",
+                                        "feature1":  "Verbind met Cardano-wallets (Nami, Eternl, Yoroi, etc.)",
+                                        "feature2":  "Bekijk wallet-adres en saldo",
+                                        "feature3":  "Controleer delegatiestatus",
+                                        "feature4":  "Veilige verbinding met CIP-30-standaard"
+                                    },
+                       "note":  {
+                                    "title":  "Opmerking:",
+                                    "description":  "Dit is een demonstratiepagina. Volledige wallet-integratie vereist blockchain API-setup."
+                                },
+                       "supported":  {
+                                         "title":  "Ondersteunde Wallets"
+                                     }
+                   },
+    "wallet":  {
+                   "title":  "Verbind Wallet",
+                   "description":  "Verbind je Cardano-wallet om je delegatiestatus te controleren",
+                   "connect":  "Verbind Wallet",
+                   "connecting":  "Verbinden...",
+                   "connected":  "Wallet Verbonden",
+                   "disconnect":  "Verbreek Verbinding",
+                   "address":  "Wallet-Adres",
+                   "error":  "Kan wallet niet verbinden",
+                   "supported":  "Ondersteunde wallets: Nami, Eternl, Yoroi, Flint, Gero, Typhon"
+               },
+    "advertise":  {
+                      "title":  "Adverteer op ADAHealth",
+                      "subtitle":  "Bereik betrokken Cardano-delegators en stake pool-operators",
+                      "description":  "Promoot je stake pool, dApp of Cardano-service bij onze gemeenschap",
+                      "benefit1":  "Gericht publiek van actieve Cardano-delegators",
+                      "benefit2":  "Premium bannerplaatsing op alle pagina\u0027s",
+                      "benefit3":  "Transparante prijzen en prestatiestatistieken",
+                      "cta":  "Begin Met Adverteren",
+                      "benefits":  {
+                                       "targeted":  {
+                                                        "title":  "Gericht Publiek",
+                                                        "description":  "Bereik actieve Cardano-delegators die staking-beslissingen nemen"
+                                                    },
+                                       "visibility":  {
+                                                          "title":  "Hoge Zichtbaarheid",
+                                                          "description":  "Bannerplaatsing op alle pagina\u0027s met duizenden maandelijkse bezoekers"
+                                                      },
+                                       "affordable":  {
+                                                          "title":  "Betaalbare Tarieven",
+                                                          "description":  "Concurrerende prijzen met pay-per-impression-model"
+                                                      }
+                                   },
+                      "form":  {
+                                   "title":  "Maak Advertentie",
+                                   "description":  "Beschrijving",
+                                   "adTitle":  "Advertentie Titel",
+                                   "adTitlePlaceholder":  "Je stake pool of servicenaam",
+                                   "descriptionPlaceholder":  "Korte beschrijving (max 100 tekens)",
+                                   "url":  "Bestemmings-URL",
+                                   "image":  "Afbeeldings-URL (optioneel)",
+                                   "imageHint":  "Aanbevolen: 400x400px, max 200KB",
+                                   "budget":  "Budget (ADA)",
+                                   "budgetHint":  "Minimum 100 ADA",
+                                   "duration":  "Campagneduur",
+                                   "days":  "dagen",
+                                   "estimate":  "Geschat Bereik",
+                                   "estimateDescription":  "Op basis van je budget schatten we ~50.000 vertoningen over de geselecteerde periode",
+                                   "submit":  "Start Campagne"
+                               },
+                      "banner":  "Groei je pool - Adverteer met ons",
+                      "bannerButton":  "Bekijk Prijzen"
+                  },
+    "adAdmin":  {
+                    "title":  "Advertentiecampagne Dashboard",
+                    "subtitle":  "Monitor je advertentiecampagnes",
+                    "stats":  {
+                                  "impressions":  "Totaal Vertoningen",
+                                  "clicks":  "Totaal Klikken",
+                                  "spent":  "Totaal Uitgegeven"
+                              },
+                    "actions":  {
+                                    "pause":  "Pauzeren",
+                                    "resume":  "Hervatten",
+                                    "edit":  "Bewerken",
+                                    "delete":  "Verwijderen"
+                                }
+                },
+    "footer":  {
+                   "tagline":  "Bescherming van Cardano-delegators door transparantie",
+                   "quickLinks":  "Snelle Links",
+                   "resources":  "Resources",
+                   "documentation":  "Documentatie",
+                   "advertise":  "Adverteer",
+                   "community":  "Gemeenschap",
+                   "rights":  "Alle rechten voorbehouden.",
+                   "privacy":  "Privacybeleid",
+                   "terms":  "Servicevoorwaarden"
+               }
 }
