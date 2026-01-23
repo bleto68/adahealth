@@ -1,49 +1,47 @@
-import { type ClassValue, clsx } from 'clsx';
-import { twMerge } from 'tailwind-merge';
+import { type ClassValue, clsx } from "clsx"
+import { twMerge } from "tailwind-merge"
 
 export function cn(...inputs: ClassValue[]) {
-  return twMerge(clsx(inputs));
+  return twMerge(clsx(inputs))
 }
 
 export function formatAda(amount: number): string {
-  return `â‚³${amount.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
+  return '₳' + new Intl.NumberFormat('en-US', {
+    minimumFractionDigits: 0,
+    maximumFractionDigits: 0,
+  }).format(amount);
 }
 
 export function formatNumber(num: number): string {
   if (num >= 1000000) {
-    return `${(num / 1000000).toFixed(1)}M`;
+    return (num / 1000000).toFixed(1) + 'M';
   }
   if (num >= 1000) {
-    return `${(num / 1000).toFixed(1)}K`;
+    return (num / 1000).toFixed(1) + 'K';
   }
   return num.toString();
 }
 
-export function truncateAddress(address: string, start = 8, end = 8): string {
-  if (address.length <= start + end) return address;
-  return `${address.slice(0, start)}...${address.slice(-end)}`;
+export function shortenAddress(address: string, chars = 8): string {
+  return `${address.substring(0, chars)}...${address.substring(address.length - chars)}`;
 }
 
-export function formatDate(date: string | Date): string {
-  return new Date(date).toLocaleDateString('en-US', {
-    year: 'numeric',
-    month: 'short',
-    day: 'numeric',
-  });
+export function epochToDate(epoch: number): Date {
+  const mainnetStart = new Date('2020-07-29T21:44:51Z');
+  const epochDuration = 5 * 24 * 60 * 60 * 1000;
+  const epochsSinceStart = epoch - 208;
+  return new Date(mainnetStart.getTime() + (epochsSinceStart * epochDuration));
 }
 
-export function calculateCTR(clicks: number, impressions: number): number {
-  if (impressions === 0) return 0;
-  return (clicks / impressions) * 100;
-}
-
-export function debounce<T extends (...args: any[]) => any>(
-  func: T,
-  wait: number
-): (...args: Parameters<T>) => void {
-  let timeout: NodeJS.Timeout;
-  return (...args: Parameters<T>) => {
-    clearTimeout(timeout);
-    timeout = setTimeout(() => func(...args), wait);
-  };
+export function relativeTime(date: Date): string {
+  const now = new Date();
+  const diff = now.getTime() - date.getTime();
+  const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+  
+  if (days === 0) return 'Today';
+  if (days === 1) return 'Yesterday';
+  if (days < 7) return `${days} days ago`;
+  if (days < 30) return `${Math.floor(days / 7)} weeks ago`;
+  if (days < 365) return `${Math.floor(days / 30)} months ago`;
+  return `${Math.floor(days / 365)} years ago`;
 }

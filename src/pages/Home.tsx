@@ -7,7 +7,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { DEMO_GLOBAL_STATS, DEMO_CHART_DATA, DEMO_LEADERBOARD, type PoolData } from '@/lib/data';
-import { formatADA, formatNumber } from '@/lib/utils';
+import { formatAda, formatNumber } from '@/lib/utils';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
 import AdBanner from '@/components/AdBanner';
 import AdvertiseCTA from '@/components/AdvertiseCTA';
@@ -71,7 +71,7 @@ export default function Home() {
             
             <motion.p variants={itemVariants} className="text-xl text-muted-foreground max-w-2xl mx-auto">
               {t('hero.description', {
-                ada: formatADA(DEMO_GLOBAL_STATS.totalStakeLost),
+                ada: formatAda(DEMO_GLOBAL_STATS.totalStakeLost),
                 wallets: formatNumber(DEMO_GLOBAL_STATS.affectedWallets)
               })}
             </motion.p>
@@ -117,7 +117,7 @@ export default function Home() {
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-3xl font-bold">{formatADA(DEMO_GLOBAL_STATS.totalStakeLost)}</p>
+                <p className="text-3xl font-bold">{formatAda(DEMO_GLOBAL_STATS.totalStakeLost)}</p>
                 <p className="text-sm text-muted-foreground mt-1">{t('stats.totalStake')}</p>
               </CardContent>
             </Card>
@@ -198,7 +198,7 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="text-right">
-                  <p className="text-lg font-semibold">{formatADA(pool.stake)}</p>
+                  <p className="text-lg font-semibold">{formatAda(pool.stake)}</p>
                   <p className="text-sm text-muted-foreground">{formatNumber(pool.delegators)} {t('leaderboard.delegators')}</p>
                 </div>
               </CardContent>
