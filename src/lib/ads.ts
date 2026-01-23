@@ -1,69 +1,105 @@
 export interface Advertisement {
   id: string;
-  title: string;
-  description: string;
-  url: string;
-  image_url?: string;
-  start_date: string;
-  end_date: string;
-  budget: number;
-  impressions: number;
-  clicks: number;
-  status: 'active' | 'paused' | 'completed';
+  poolTicker: string;
+  poolName: string;
+  tagline: string;
+  features: string[];
+  websiteUrl?: string;
+  status: 'active' | 'pending' | 'expired';
+  startDate: Date;
+  endDate: Date;
+  duration: 2 | 7 | 30;
+  amountPaid: number;
+  txHash?: string;
+  paymentAddress: string;
+  createdAt: Date;
+  isPermanent?: boolean;
 }
 
-const mockAds: Advertisement[] = [
+export interface AdPurchaseRequest {
+  poolTicker: string;
+  poolName: string;
+  tagline: string;
+  features: string[];
+  websiteUrl?: string;
+  duration: 2 | 7 | 30;
+  paymentAddress: string;
+}
+
+export const AD_PRICING = {
+  2: 100,
+  7: 300,
+  30: 1000,
+} as const;
+
+export const PAYMENT_ADDRESS = 'addr1qxy2kgdygjrsqtzq2n0yrf2493p83kkfjhx0wbi0uzwygk896r5w9s7mxvw0jc9kqz2p3c3j5d7v2qnrm8zdj83p3q8qsrfqgv';
+
+const DEMO_ADS: Advertisement[] = [
   {
-    id: 'ad-1',
-    title: 'Boost Your Cardano Staking with XYZ Pool',
-    description: 'Join 10,000+ delegators earning consistent rewards',
-    url: 'https://example-pool.com',
-    image_url: 'https://placehold.co/100x100/667eea/ffffff?text=XYZ',
-    start_date: '2024-01-01',
-    end_date: '2024-12-31',
-    budget: 1000,
-    impressions: 50000,
-    clicks: 1250,
+    id: 'dutchpool-permanent',
+    poolTicker: 'NLD',
+    poolName: 'Dutchpool',
+    tagline: 'Professional Cardano Stake Pool - 0% Margin',
+    features: ['0% margin', 'High uptime', 'Professional support', 'Community driven'],
+    websiteUrl: 'https://dutchpool.io',
     status: 'active',
+    startDate: new Date('2024-01-01'),
+    endDate: new Date('2099-12-31'),
+    duration: 30,
+    amountPaid: 0,
+    paymentAddress: PAYMENT_ADDRESS,
+    createdAt: new Date('2024-01-01'),
+    isPermanent: true,
   },
 ];
 
 export async function getActiveAds(): Promise<Advertisement[]> {
-  await new Promise((resolve) => setTimeout(resolve, 100));
-  
+  await new Promise(resolve => setTimeout(resolve, 300));
   const now = new Date();
-  return mockAds.filter((ad) => {
-    if (ad.status !== 'active') return false;
-    const endDate = new Date(ad.end_date);
-    return endDate > now;
-  });
+  return DEMO_ADS.filter(ad => 
+    ad.status === 'active' && 
+    ad.startDate <= now && 
+    ad.endDate >= now
+  );
 }
 
-export async function getAdById(id: string): Promise<Advertisement | null> {
-  await new Promise((resolve) => setTimeout(resolve, 100));
-  return mockAds.find((ad) => ad.id === id) || null;
+export async function createAdPurchase(request: AdPurchaseRequest): Promise<{
+  success: boolean;
+  adId?: string;
+  paymentAddress?: string;
+  amountDue?: number;
+  error?: string;
+}> {
+  try {
+    const amountDue = AD_PRICING[request.duration];
+    const response = await fetch('/api/ads/create', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ ...request, amountDue }),
+    });
+    if (!response.ok) throw new Error('Failed to create ad');
+    return await response.json();
+  } catch (error) {
+    console.error('Error creating ad:', error);
+    return { success: false, error: 'Failed to create advertisement request' };
+  }
 }
 
-export async function trackImpression(adId: string): Promise<void> {
-  await new Promise((resolve) => setTimeout(resolve, 50));
-  console.log(`Tracked impression for ad: ${adId}`);
-}
-
-export async function trackClick(adId: string): Promise<void> {
-  await new Promise((resolve) => setTimeout(resolve, 50));
-  console.log(`Tracked click for ad: ${adId}`);
-}
-
-export async function createAd(ad: Omit<Advertisement, 'id' | 'impressions' | 'clicks'>): Promise<Advertisement> {
-  await new Promise((resolve) => setTimeout(resolve, 500));
-  
-  const newAd: Advertisement = {
-    ...ad,
-    id: `ad-${Date.now()}`,
-    impressions: 0,
-    clicks: 0,
-  };
-  
-  mockAds.push(newAd);
-  return newAd;
+export async function verifyPayment(adId: string, txHash: string): Promise<{
+  success: boolean;
+  verified?: boolean;
+  error?: string;
+}> {
+  try {
+    const response = await fetch('/api/ads/verify-payment', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ adId, txHash }),
+    });
+    if (!response.ok) throw new Error('Failed to verify payment');
+    return await response.json();
+  } catch (error) {
+    console.error('Error verifying payment:', error);
+    return { success: false, error: 'Failed to verify payment' };
+  }
 }
