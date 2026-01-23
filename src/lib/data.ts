@@ -18,14 +18,12 @@ export interface GlobalStats {
   totalStakeLost: number;
   affectedWallets: number;
   retiredPools: number;
-  lastUpdated: Date;
 }
 
 export const DEMO_GLOBAL_STATS: GlobalStats = {
   totalStakeLost: 86_234_567,
   affectedWallets: 47_283,
   retiredPools: 187,
-  lastUpdated: new Date(),
 };
 
 export const DEMO_POOLS: PoolData[] = [
@@ -92,8 +90,8 @@ export const DEMO_POOLS: PoolData[] = [
 
 export const DEMO_LEADERBOARD: PoolData[] = [
   ...DEMO_POOLS.filter(p => p.status === 'retired'),
-  ...Array.from({ length: 17 }, (_, i) => ({
-    poolId: `pool1demo${i}${i}${i}${i}${i}${i}${i}${i}${i}${i}${i}${i}${i}${i}${i}${i}${i}${i}`,
+  ...Array.from({ length: 7 }, (_, i) => ({
+    poolId: `pool1demo${i}xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx`,
     ticker: `DEMO${i + 4}`,
     name: `Demo Retired Pool ${i + 4}`,
     status: 'retired' as const,
@@ -109,9 +107,9 @@ export const DEMO_LEADERBOARD: PoolData[] = [
   })),
 ].sort((a, b) => b.lostRewards - a.lostRewards);
 
-export const DEMO_CHART_DATA = Array.from({ length: 12 }, (_, i) => ({
-  month: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'][i],
-  retiredPools: Math.floor(Math.random() * 30) + 10,
+export const DEMO_CHART_DATA = DEMO_LEADERBOARD.slice(0, 10).map(pool => ({
+  ticker: pool.ticker,
+  lostRewards: pool.lostRewards,
 }));
 
 export function checkStakeAddress(stakeAddress: string): {
@@ -121,6 +119,7 @@ export function checkStakeAddress(stakeAddress: string): {
   if (!stakeAddress.startsWith('stake1')) {
     return { pool: null, error: 'Invalid stake address format' };
   }
+  
   const randomPool = DEMO_POOLS[Math.floor(Math.random() * DEMO_POOLS.length)];
   return { pool: randomPool };
 }
