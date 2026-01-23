@@ -1,189 +1,165 @@
-﻿{
-    "nav":  {
-                "home":  "Home",
-                "check":  "Controleren",
-                "leaderboard":  "Ranglijst",
-                "about":  "Over Ons"
-            },
-    "hero":  {
-                 "badge":  "Onafhankelijk Transparantieplatform",
-                 "title":  "Bescherm je Cardano-beloningen",
-                 "subtitle":  "Ontmasker gepensioneerde stake pools die delegators miljoenen kosten",
-                 "description":  "Meer dan {{ada}} is momenteel gedelegeerd aan gepensioneerde pools. Meer dan {{wallets}} weten niet dat ze nul beloningen verdienen. ADAHealth biedt transparantie met alleen publieke on-chain data.",
-                 "placeholder":  "Voer je stake-adres in (stake1...)",
-                 "button":  "Controleren",
-                 "trustLine":  "Onafhankelijk. Transparant. Gebaseerd op publieke blockchain-data."
-             },
-    "stats":  {
-                  "lostRewards":  "Verloren Beloningen",
-                  "affectedWallets":  "Getroffen Wallets",
-                  "retiredPools":  "Gepensioneerde Pools",
-                  "totalStake":  "Totale stake in gepensioneerde pools",
-                  "activeUsers":  "Wallets die nul beloningen verdienen",
-                  "poolsRetired":  "Pools die geen blocks meer produceren"
-              },
-    "home":  {
-                 "topPools":  "Ranglijst Gepensioneerde Pools",
-                 "viewAll":  "Details Bekijken",
-                 "chartTitle":  "Top 10 Gepensioneerde Pools naar Verloren Beloningen"
-             },
-    "leaderboard":  {
-                        "title":  "Ranglijst Gepensioneerde Pools",
-                        "subtitle":  "Gerangschikt op totale verloren beloningen",
-                        "rank":  "Pos",
-                        "ticker":  "Ticker",
-                        "name":  "Pool Naam",
-                        "delegators":  "Delegators",
-                        "stake":  "Stake",
-                        "lostRewards":  "Verloren Beloningen",
-                        "retiredEpoch":  "Gepensioneerd Epoch",
-                        "viewDetails":  "Details Bekijken",
-                        "stats":  {
-                                      "affectedWallets":  "Getroffen Wallets",
-                                      "retiredPools":  "Gepensioneerde Pools",
-                                      "totalLocked":  "Totaal Vergrendeld"
-                                  },
-                        "wallets":  "wallets"
-                    },
-    "check":  {
-                  "title":  "Controleer Je Stake",
-                  "subtitle":  "Verifieer of je pool actief is en beloningen verdient",
-                  "placeholder":  "Voer je stake-adres in (stake1...)",
-                  "button":  "Controleren",
-                  "loading":  "Controleren...",
-                  "errorTitle":  "Fout",
-                  "invalidAddress":  "Ongeldig stake-adres formaat",
-                  "notFound":  "Stake-adres niet gevonden",
-                  "activeTitle":  "Actieve Pool",
-                  "activeMessage":  "Je stake verdient beloningen!",
-                  "retiredTitle":  "Gepensioneerde Pool",
-                  "retiredMessage":  "Je pool is gepensioneerd en verdient geen beloningen",
-                  "poolName":  "Pool Naam",
-                  "ticker":  "Ticker",
-                  "status":  "Status",
-                  "delegators":  "Delegators",
-                  "stake":  "Stake",
-                  "roa":  "ROA",
-                  "retiredEpoch":  "Gepensioneerd Epoch",
-                  "lostRewards":  "Geschatte Verloren Beloningen",
-                  "recommendation":  "Aanbeveling",
-                  "redelegateNow":  "Overdelegeer Nu",
-                  "checkAnother":  "Controleer Een Ander Adres",
-                  "form":  {
-                               "description":  "Voer je stake-adres in om te verifiëren dat je pool actief is",
-                               "title":  "Controleer de status van je pool"
-                           },
-                  "result":  {
-                                 "pool":  "Pool",
-                                 "active":  {
-                                                "title":  "✓ Actieve Pool"
-                                            },
-                                 "lastReward":  "Laatste Beloning",
-                                 "stake":  "Totale Stake"
-                             }
-              },
-    "about":  {
-                  "team":  {
-                               "title":  "Het Team",
-                               "description":  "ADAHealth is gebouwd en onderhouden door Dutchpool NLD, een onafhankelijke stake pool operator.",
-                               "contact":  "Contact opnemen"
-                           },
-                  "title":  "Over ADAHealth",
-                  "values":  {
-                                 "title":  "Onze Waarden",
-                                 "transparency":  {
-                                                      "description":  "Alle data komt rechtstreeks van de publieke blockchain.",
-                                                      "title":  "Transparantie"
-                                                  },
-                                 "community":  {
-                                                   "description":  "Gebouwd door en voor de Cardano-gemeenschap.",
-                                                   "title":  "Community-gedreven"
-                                               },
-                                 "accuracy":  {
-                                                  "description":  "Real-time data rechtstreeks van de blockchain.",
-                                                  "title":  "Nauwkeurigheid"
-                                              },
-                                 "independence":  {
-                                                      "description":  "Geen affiliatie met pools of organisaties.",
-                                                      "title":  "Onafhankelijkheid"
-                                                  }
-                             },
-                  "subtitle":  "Transparantie en bescherming voor Cardano delegators",
-                  "mission":  {
-                                  "title":  "Onze Missie",
-                                  "paragraph1":  "ADAHealth is opgericht met een eenvoudige missie: delegators beschermen door transparantie te bieden over gepensioneerde stake pools.",
-                                  "paragraph3":  "Wij geloven dat elke delegator toegang moet hebben tot accurate, actuele informatie over de status van hun pool.",
-                                  "paragraph2":  "Wanneer pools gepensioneerd worden, blijven veel wallets onbewust gedelegeerd, wat resulteert in miljoenen ADA\u0027s aan verloren beloningen."
-                              }
-              },
-    "wallet":  {
-                   "connect":  "Wallet Verbinden",
-                   "connecting":  "Verbinden...",
-                   "connected":  "Verbonden",
-                   "disconnect":  "Ontkoppelen",
-                   "selectWallet":  "Selecteer Wallet",
-                   "noWallets":  "Geen wallets gevonden",
-                   "installWallet":  "Installeer een Cardano wallet extensie",
-                   "checkStake":  "Controleer Stake"
-               },
-    "footer":  {
-                   "tagline":  "Cardano delegeerders beschermen door transparantie.",
-                   "useful":  "Handige Links",
-                   "builtBy":  "Gebouwd door",
-                   "builtByDesc":  "ADAHealth is gebouwd en onderhouden door een onafhankelijke Cardano stake pool operator (Dutchpool NLD), met de missie om transparantie te verbeteren en delegators te beschermen.",
-                   "dutchpoolInfo":  "Dutchpool NLD is een betrouwbare Cardano stake pool. Pool ticker: NLD. 0% levenslange marge - Consistente prestaties",
-                   "allRights":  "Alle data is afkomstig van publieke blockchain-informatie.",
-                   "privacy":  "Privacybeleid",
-                   "terms":  "Servicevoorwaarden"
-               },
-    "advertise":  {
-                      "banner":  "Groei je pool - Adverteer met ons",
-                      "bannerButton":  "Bekijk Prijzen",
-                      "ctaTitle":  "Adverteer jouw Cardano stake pool op ADAHealth",
-                      "ctaDesc":  "Bereik actieve delegators die op zoek zijn naar betrouwbare pools.",
-                      "ctaButton":  "Bekijk advertentiepakketten",
-                      "title":  "Adverteer je Cardano Pool",
-                      "subtitle":  "Bereik duizenden actieve delegators die op zoek zijn naar betrouwbare pools",
-                      "pricing":  "Advertentieprijzen",
-                      "days2":  "2 Dagen",
-                      "days7":  "7 Dagen",
-                      "days30":  "30 Dagen",
-                      "popular":  "Populair",
-                      "adaPrice":  "{{price}} ADA",
-                      "perDay":  "per dag",
-                      "createAd":  "Advertentie Maken",
-                      "formTitle":  "Maak je Advertentie",
-                      "poolTicker":  "Pool Ticker",
-                      "poolTickerPlaceholder":  "bijv. NLD",
-                      "poolName":  "Pool Naam",
-                      "poolNamePlaceholder":  "bijv. Dutchpool",
-                      "tagline":  "Tagline",
-                      "taglinePlaceholder":  "bijv. Betrouwbare Cardano Staking",
-                      "features":  "Kenmerken (max 4)",
-                      "featurePlaceholder":  "bijv. 0% marge",
-                      "addFeature":  "Kenmerk Toevoegen",
-                      "websiteUrl":  "Website URL (optioneel)",
-                      "websiteUrlPlaceholder":  "https://jouwpool.nl",
-                      "duration":  "Duur",
-                      "preview":  "Voorbeeld",
-                      "summary":  "Samenvatting",
-                      "totalCost":  "Totale Kosten",
-                      "submit":  "Doorgaan naar Betaling",
-                      "paymentTitle":  "Betaling Afronden",
-                      "paymentInstructions":  "Stuur exact",
-                      "paymentTo":  "naar het volgende adres:",
-                      "paymentAddress":  "Betaaladres",
-                      "txHash":  "Transactie Hash",
-                      "txHashPlaceholder":  "Plak hier je transactie hash",
-                      "verify":  "Betaling Verifiëren",
-                      "back":  "Terug naar Formulier",
-                      "successTitle":  "Betaling Ontvangen!",
-                      "successMessage":  "Je advertentie is nu live op ADAHealth.io",
-                      "successDetails":  "Je advertentie is zichtbaar voor duizenden delegators op de hele site.",
-                      "viewAd":  "Bekijk Live Advertenties",
-                      "createAnother":  "Nog Een Advertentie Maken"
-                  },
-    "common":  {
-                   "viewDetails":  "Details Bekijken"
-               }
+{
+  "nav": {
+    "home": "Home",
+    "check": "Controleren",
+    "leaderboard": "Ranglijst",
+    "about": "Over Ons"
+  },
+  "hero": {
+    "badge": "Onafhankelijk Transparantieplatform",
+    "title": "Bescherm je Cardano-beloningen",
+    "subtitle": "Ontmasker gepensioneerde stake pools die delegators miljoenen kosten",
+    "description": "Meer dan {{ada}} is momenteel gedelegeerd aan gepensioneerde pools. Meer dan {{wallets}} weten niet dat ze nul beloningen verdienen. ADAHealth biedt transparantie met alleen publieke on-chain data.",
+    "placeholder": "Voer je stake-adres in (stake1...)",
+    "button": "Controleren",
+    "trustLine": "Onafhankelijk. Transparant. Gebaseerd op publieke blockchain-data."
+  },
+  "stats": {
+    "lostRewards": "Verloren Beloningen",
+    "affectedWallets": "Getroffen Wallets",
+    "retiredPools": "Gepensioneerde Pools",
+    "totalStake": "Totale stake in gepensioneerde pools",
+    "activeUsers": "Wallets die nul beloningen verdienen",
+    "poolsRetired": "Pools die geen blocks meer produceren"
+  },
+  "home": {
+    "topPools": "Ranglijst Gepensioneerde Pools",
+    "viewAll": "Details Bekijken",
+    "chartTitle": "Top 10 Gepensioneerde Pools naar Verloren Beloningen",
+    "chartSubtitle": "Top gepensioneerde pools op geschatte verloren beloningen"
+  },
+  "leaderboard": {
+    "title": "Ranglijst Gepensioneerde Pools",
+    "subtitle": "Gerangschikt op totale verloren beloningen",
+    "rank": "Pos",
+    "ticker": "Ticker",
+    "name": "Pool Naam",
+    "delegators": "Delegators",
+    "stake": "Stake",
+    "lostRewards": "Verloren Beloningen",
+    "retiredEpoch": "Gepensioneerd Epoch",
+    "viewDetails": "Details Bekijken",
+    "wallets": "wallets"
+  },
+  "check": {
+    "title": "Controleer Je Stake",
+    "subtitle": "Verifieer of je pool actief is en beloningen verdient",
+    "placeholder": "Voer je stake-adres in (stake1...)",
+    "button": "Controleren",
+    "loading": "Controleren...",
+    "errorTitle": "Fout",
+    "invalidAddress": "Ongeldig stake-adres formaat",
+    "notFound": "Stake-adres niet gevonden",
+    "activeTitle": "Actieve Pool",
+    "activeMessage": "Je stake verdient beloningen!",
+    "retiredTitle": "Gepensioneerde Pool",
+    "retiredMessage": "Je pool is gepensioneerd en verdient geen beloningen",
+    "poolName": "Pool Naam",
+    "ticker": "Ticker",
+    "status": "Status",
+    "delegators": "Delegators",
+    "stake": "Stake",
+    "roa": "ROA",
+    "retiredEpoch": "Gepensioneerd Epoch",
+    "lostRewards": "Geschatte Verloren Beloningen",
+    "recommendation": "Aanbeveling",
+    "redelegateNow": "Overdelegeer Nu",
+    "checkAnother": "Controleer Een Ander Adres"
+  },
+  "about": {
+    "mission": "Onze Missie",
+    "problemDesc": "Wanneer stake pools gepensioneerd worden, stoppen delegators met het verdienen van beloningen. Veel wallets blijven onbewust gedelegeerd aan gepensioneerde pools, wat resulteert in miljoenen ADA's aan verloren potentiële beloningen.",
+    "ctaButton": "Controleer Nu je Stake"
+  },
+  "wallet": {
+    "title": "Wallet Verbinden",
+    "select": "Selecteer een wallet",
+    "readOnly": "Alleen-lezen modus",
+    "readOnlyDesc": "Verbind je wallet om je stake-adres automatisch te controleren",
+    "demoMode": "Demo Modus",
+    "demoDesc": "Test de functionaliteit met demo wallets"
+  },
+  "footer": {
+    "tagline": "Cardano delegeerders beschermen door transparantie.",
+    "useful": "Handige Links",
+    "builtBy": "Gebouwd door",
+    "builtByDesc": "ADAHealth is gebouwd en onderhouden door een onafhankelijke Cardano stake pool operator (Dutchpool NLD), met de missie om transparantie te verbeteren en delegators te beschermen.",
+    "dutchpoolInfo": "Dutchpool NLD is een betrouwbare Cardano stake pool. Pool ticker: NLD. 0% levenslange marge - Consistente prestaties",
+    "allRights": "Alle data is afkomstig van publieke blockchain-informatie.",
+    "privacy": "Privacybeleid",
+    "terms": "Servicevoorwaarden"
+  },
+  "common": {
+    "viewDetails": "Details Bekijken",
+    "days": "dagen"
+  },
+  "advertise": {
+    "banner": "Groei je pool - Adverteer met ons",
+    "bannerButton": "Bekijk Prijzen"
+  },
+  "adPurchase": {
+    "title": "Adverteer je Cardano Pool",
+    "subtitle": "Bereik duizenden actieve delegators die op zoek zijn naar betrouwbare pools",
+    "benefits": {
+      "title": "Waarom Adverteren op ADAHealth?",
+      "targeted": {
+        "title": "Gerichte Doelgroep",
+        "description": "Bereik delegators die actief zoeken naar betrouwbare pools"
+      },
+      "visibility": {
+        "title": "Prime Zichtbaarheid",
+        "description": "Je advertentie verschijnt op alle belangrijke pagina's"
+      },
+      "affordable": {
+        "title": "Betaalbare Prijzen",
+        "description": "Flexibele pakketten voor elke poolgrootte"
+      }
+    },
+    "form": {
+      "title": "Maak je Advertentie",
+      "description": "Vul de onderstaande gegevens in om je pool te promoten",
+      "poolTicker": "Pool Ticker",
+      "poolTickerPlaceholder": "bijv. NLD",
+      "poolName": "Pool Naam",
+      "poolNamePlaceholder": "bijv. Dutchpool",
+      "tagline": "Tagline",
+      "taglinePlaceholder": "bijv. Betrouwbare Cardano Staking",
+      "features": "Kenmerken (max 4)",
+      "featurePlaceholder": "bijv. 0% marge",
+      "addFeature": "Kenmerk Toevoegen",
+      "websiteUrl": "Website URL (optioneel)",
+      "websiteUrlPlaceholder": "https://jouwpool.nl",
+      "duration": "Duur",
+      "days": "dagen"
+    },
+    "pricing": {
+      "title": "Advertentieprijzen",
+      "days2": "2 Dagen",
+      "days7": "7 Dagen",
+      "days30": "30 Dagen",
+      "popular": "Populair",
+      "perDay": "per dag"
+    },
+    "preview": "Voorbeeld",
+    "summary": "Samenvatting",
+    "totalCost": "Totale Kosten",
+    "submit": "Doorgaan naar Betaling",
+    "payment": {
+      "title": "Betaling Afronden",
+      "instructions": "Stuur exact",
+      "to": "naar het volgende adres:",
+      "address": "Betaaladres",
+      "txHash": "Transactie Hash",
+      "txHashPlaceholder": "Plak hier je transactie hash",
+      "verify": "Betaling Verifiëren",
+      "back": "Terug naar Formulier"
+    },
+    "success": {
+      "title": "Betaling Ontvangen!",
+      "message": "Je advertentie is nu live op ADAHealth.io",
+      "details": "Je advertentie is zichtbaar voor duizenden delegators op de hele site.",
+      "viewAd": "Bekijk Live Advertenties",
+      "createAnother": "Nog Een Advertentie Maken"
+    }
+  }
 }
