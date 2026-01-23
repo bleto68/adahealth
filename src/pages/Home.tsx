@@ -1,232 +1,233 @@
-import { Link } from 'react-router-dom';
-import { ArrowRight, TrendingDown, Users, Shield, Search } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import AdvertiseCTA from '@/components/AdvertiseCTA';
+import { useState } from 'react';
+import { useNavigate, Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
+import { ArrowRight, AlertTriangle, Users, TrendingDown, Shield, Sparkles } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { DEMO_GLOBAL_STATS, DEMO_CHART_DATA, DEMO_LEADERBOARD } from '@/lib/data';
+import { formatADA, formatNumber } from '@/lib/utils';
+import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
+import AdBanner from '@/components/AdBanner';
+import AdvertiseCTA from '@/components/AdvertiseCTA';
 
 export default function Home() {
+  const [stakeAddress, setStakeAddress] = useState('');
+  const navigate = useNavigate();
   const { t } = useTranslation();
-
-  const stats = [
-    {
-      icon: TrendingDown,
-      value: 'â‚³86M',
-      label: t('home.stats.lost'),
-      color: 'text-red-500',
-    },
-    {
-      icon: Users,
-      value: '47,000+',
-      label: t('home.stats.affected'),
-      color: 'text-yellow-500',
-    },
-    {
-      icon: Shield,
-      value: '100%',
-      label: t('home.stats.transparent'),
-      color: 'text-green-500',
-    },
-  ];
+  
+  const handleCheck = () => {
+    if (stakeAddress.trim()) {
+      navigate(`/check/${stakeAddress.trim()}`);
+    }
+  };
 
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
-      transition: {
-        staggerChildren: 0.1,
-      },
-    },
+      transition: { staggerChildren: 0.1 }
+    }
   };
 
   const itemVariants = {
-    hidden: { y: 20, opacity: 0 },
-    visible: {
-      y: 0,
-      opacity: 1,
-    },
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0 }
   };
 
   return (
-    <div className="flex flex-col">
-      {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-b from-background via-background/95 to-background py-20 lg:py-32">
-        <div className="absolute inset-0 bg-grid-white/[0.02] bg-[size:50px_50px]" />
-        <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent" />
-
-        <div className="container relative mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="mx-auto max-w-4xl text-center"
+    <div className="space-y-16 pb-16">
+      {/* Advertise CTA Banner - BOVENAAN */}
+      <div className="bg-gradient-to-r from-purple-600 to-purple-700 text-white">
+        <div className="container mx-auto px-6 py-3">
+          <Link 
+            to="/advertise" 
+            className="flex items-center justify-center gap-2 hover:opacity-90 transition-opacity"
           >
-            <motion.div
-              initial={{ scale: 0.9, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-              className="mb-6 inline-block"
-            >
-              <div className="rounded-full bg-primary/10 px-4 py-2 text-sm font-medium text-primary border border-primary/20">
-                {t('home.hero.badge')}
-              </div>
+            <Sparkles className="w-5 h-5" />
+            <span className="font-medium">{t('advertise.banner')}</span>
+            <span className="px-3 py-1 bg-white/20 rounded-full text-sm font-semibold">
+              {t('advertise.bannerButton')}
+            </span>
+          </Link>
+        </div>
+      </div>
+
+      {/* Hero Section */}
+      <section className="pt-8">
+        <div className="container mx-auto px-6">
+          <motion.div
+            initial="hidden"
+            animate="visible"
+            variants={containerVariants}
+            className="max-w-4xl mx-auto text-center space-y-8"
+          >
+            <motion.div variants={itemVariants} className="inline-block px-4 py-2 bg-danger/10 text-danger rounded-full text-sm font-medium border border-danger/20">
+              {t('hero.badge')}
             </motion.div>
-
-            <motion.h1
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-              className="mb-6 text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl"
-            >
-              <span className="gradient-text">{t('home.hero.title')}</span>
+            
+            <motion.h1 variants={itemVariants} className="text-4xl md:text-6xl font-bold tracking-tight">
+              {t('hero.title')}
             </motion.h1>
-
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-              className="mb-8 text-lg text-muted-foreground sm:text-xl"
-            >
-              {t('home.hero.subtitle')}
+            
+            <motion.p variants={itemVariants} className="text-xl text-muted-foreground max-w-2xl mx-auto">
+              {t('hero.description', {
+                ada: formatADA(DEMO_GLOBAL_STATS.totalStakeLost),
+                wallets: formatNumber(DEMO_GLOBAL_STATS.affectedWallets)
+              })}
             </motion.p>
 
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.5 }}
-              className="flex flex-col sm:flex-row gap-4 justify-center"
-            >
-              <Button asChild size="lg" className="text-base glow-effect">
-                <Link to="/check">
-                  <Search className="mr-2 h-5 w-5" />
-                  {t('home.hero.cta')}
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </Link>
-              </Button>
-              <Button asChild variant="outline" size="lg" className="text-base">
-                <Link to="/leaderboard">{t('home.hero.secondary')}</Link>
+            <motion.div variants={itemVariants} className="flex flex-col sm:flex-row gap-4 max-w-xl mx-auto">
+              <Input
+                placeholder={t('hero.placeholder')}
+                value={stakeAddress}
+                onChange={(e) => setStakeAddress(e.target.value)}
+                onKeyDown={(e) => e.key === 'Enter' && handleCheck()}
+                className="flex-1"
+              />
+              <Button onClick={handleCheck} size="lg" className="sm:w-auto">
+                {t('hero.button')} <ArrowRight className="ml-2 w-4 h-4" />
               </Button>
             </motion.div>
+
+            <motion.p variants={itemVariants} className="text-sm text-muted-foreground">
+              {t('hero.trustLine')}
+            </motion.p>
           </motion.div>
         </div>
       </section>
 
-      {/* Stats Section */}
-      <section className="py-16 lg:py-24">
-        <div className="container mx-auto px-4">
-          <motion.div
-            variants={containerVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-100px" }}
-            className="grid gap-6 md:grid-cols-3"
-          >
-            {stats.map((stat, index) => (
-              <motion.div key={index} variants={itemVariants}>
-                <Card className="glass-card text-center hover:border-primary/50 transition-all duration-300">
-                  <CardContent className="pt-6">
-                    <stat.icon className={`mx-auto h-12 w-12 mb-4 ${stat.color}`} />
-                    <div className="text-3xl font-bold mb-2">{stat.value}</div>
-                    <div className="text-sm text-muted-foreground">{stat.label}</div>
-                  </CardContent>
-                </Card>
-              </motion.div>
-            ))}
-          </motion.div>
-        </div>
+      {/* Ad Banner Section */}
+      <section className="container mx-auto px-6">
+        <AdBanner />
       </section>
 
-      {/* Features Section */}
-      <section className="py-16 lg:py-24 bg-card/30">
-        <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="mx-auto max-w-2xl text-center mb-12"
-          >
-            <h2 className="text-3xl font-bold mb-4">{t('home.features.title')}</h2>
-            <p className="text-muted-foreground">{t('home.features.subtitle')}</p>
+      {/* Stats Grid */}
+      <section className="container mx-auto px-6">
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={containerVariants}
+          className="grid grid-cols-1 md:grid-cols-3 gap-6"
+        >
+          <motion.div variants={itemVariants}>
+            <Card className="border-danger/50 bg-danger/5">
+              <CardHeader className="pb-3">
+                <CardTitle className="flex items-center gap-2 text-danger">
+                  <TrendingDown className="w-5 h-5" />
+                  {t('stats.lostRewards')}
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-3xl font-bold">{formatADA(DEMO_GLOBAL_STATS.totalStakeLost)}</p>
+                <p className="text-sm text-muted-foreground mt-1">{t('stats.totalStake')}</p>
+              </CardContent>
+            </Card>
           </motion.div>
 
-          <motion.div
-            variants={containerVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-100px" }}
-            className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 max-w-5xl mx-auto"
-          >
-            {[
-              {
-                title: t('home.features.check.title'),
-                description: t('home.features.check.description'),
-                icon: Search,
-              },
-              {
-                title: t('home.features.transparency.title'),
-                description: t('home.features.transparency.description'),
-                icon: Shield,
-              },
-              {
-                title: t('home.features.community.title'),
-                description: t('home.features.community.description'),
-                icon: Users,
-              },
-            ].map((feature, index) => (
-              <motion.div key={index} variants={itemVariants}>
-                <Card className="glass-card h-full hover:border-primary/50 transition-all duration-300">
-                  <CardHeader>
-                    <feature.icon className="h-10 w-10 text-primary mb-2" />
-                    <CardTitle>{feature.title}</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-sm text-muted-foreground">{feature.description}</p>
-                  </CardContent>
-                </Card>
-              </motion.div>
-            ))}
+          <motion.div variants={itemVariants}>
+            <Card>
+              <CardHeader className="pb-3">
+                <CardTitle className="flex items-center gap-2">
+                  <Users className="w-5 h-5" />
+                  {t('stats.affectedWallets')}
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-3xl font-bold">{formatNumber(DEMO_GLOBAL_STATS.affectedWallets)}</p>
+                <p className="text-sm text-muted-foreground mt-1">{t('stats.activeUsers')}</p>
+              </CardContent>
+            </Card>
           </motion.div>
-        </div>
+
+          <motion.div variants={itemVariants}>
+            <Card>
+              <CardHeader className="pb-3">
+                <CardTitle className="flex items-center gap-2">
+                  <AlertTriangle className="w-5 h-5" />
+                  {t('stats.retiredPools')}
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-3xl font-bold">{formatNumber(DEMO_GLOBAL_STATS.retiredPools)}</p>
+                <p className="text-sm text-muted-foreground mt-1">{t('stats.poolsRetired')}</p>
+              </CardContent>
+            </Card>
+          </motion.div>
+        </motion.div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-16 lg:py-24">
-        <div className="container mx-auto px-4">
-          <div className="grid gap-8 md:grid-cols-2 max-w-4xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-            >
-              <Card className="glass-card h-full">
-                <CardHeader>
-                  <CardTitle>{t('home.cta.check.title')}</CardTitle>
-                </CardHeader>
-                <CardContent className="space-y-4">
-                  <p className="text-sm text-muted-foreground">
-                    {t('home.cta.check.description')}
-                  </p>
-                  <Button asChild className="w-full">
-                    <Link to="/check">
-                      {t('home.cta.check.button')}
-                      <ArrowRight className="ml-2 h-4 w-4" />
-                    </Link>
-                  </Button>
-                </CardContent>
-              </Card>
-            </motion.div>
+      {/* Advertise CTA */}
+      <section className="container mx-auto px-6">
+        <AdvertiseCTA />
+      </section>
 
-            <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-            >
-              <AdvertiseCTA />
-            </motion.div>
+      {/* Chart */}
+      <section className="container mx-auto px-6">
+        <Card>
+          <CardHeader>
+            <CardTitle>{t('home.chartTitle')}</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <ResponsiveContainer width="100%" height={300}>
+              <BarChart data={DEMO_CHART_DATA}>
+                <CartesianGrid strokeDasharray="3 3" />
+                <XAxis dataKey="month" />
+                <YAxis />
+                <Tooltip />
+                <Bar dataKey="retiredPools" fill="hsl(var(--primary))" />
+              </BarChart>
+            </ResponsiveContainer>
+          </CardContent>
+        </Card>
+      </section>
+
+      {/* Leaderboard Preview */}
+      <section className="container mx-auto px-6">
+        <div className="flex items-center justify-between mb-6">
+          <h2 className="text-3xl font-bold">{t('home.topPools')}</h2>
+          <Button variant="outline" onClick={() => navigate('/leaderboard')}>
+            {t('home.viewAll')} <ArrowRight className="ml-2 w-4 h-4" />
+          </Button>
+        </div>
+        
+        <div className="space-y-4">
+          {DEMO_LEADERBOARD.slice(0, 5).map((pool, index) => (
+            <Card key={pool.poolId} className="hover:shadow-lg transition-shadow cursor-pointer" onClick={() => navigate(`/pool/${pool.poolId}`)}>
+              <CardContent className="flex items-center justify-between p-6">
+                <div className="flex items-center gap-4">
+                  <div className="text-2xl font-bold text-muted-foreground">#{index + 1}</div>
+                  <div>
+                    <h3 className="font-semibold">{pool.name}</h3>
+                    <p className="text-sm text-muted-foreground">{pool.ticker}</p>
+                  </div>
+                </div>
+                <div className="text-right">
+                  <p className="text-lg font-semibold">{formatADA(pool.totalStake)}</p>
+                  <p className="text-sm text-muted-foreground">{formatNumber(pool.delegators)} {t('leaderboard.delegators')}</p>
+                </div>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+      </section>
+      
+      {/* Why This Matters */}
+      <section className="py-16 bg-gradient-to-b from-blue-50/20 to-background">
+        <div className="container mx-auto px-6">
+          <div className="max-w-3xl mx-auto text-center">
+            <Shield className="w-12 h-12 mx-auto mb-6 text-primary" />
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+              {t('about.mission')}
+            </h2>
+            <p className="text-lg text-muted-foreground mb-8">
+              {t('about.problemDesc')}
+            </p>
+            <Button size="lg" onClick={() => navigate('/about')}>
+              {t('about.ctaButton')} <ArrowRight className="ml-2" />
+            </Button>
           </div>
         </div>
       </section>
