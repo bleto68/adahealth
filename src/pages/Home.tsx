@@ -9,7 +9,6 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { DEMO_GLOBAL_STATS, DEMO_CHART_DATA, DEMO_LEADERBOARD } from '@/lib/data';
 import { formatADA, formatNumber } from '@/lib/utils';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
-import AdBanner from '@/components/AdBanner';
 import AdvertiseCTA from '@/components/AdvertiseCTA';
 
 export default function Home() {
@@ -116,7 +115,7 @@ export default function Home() {
                 {t('stats.totalStake')}
               </p>
             </CardContent>
-          </Card></div></Card>
+          </Card>
 
           <Card className="border-orange-500/50 bg-orange-500/5">
             <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
@@ -155,30 +154,32 @@ export default function Home() {
         <AdvertiseCTA />
       </section>
 
-      {/* Chart Section */}
+      {/* Chart Section - WITH PADDING */}
       <section className="container mx-auto px-6">
-        <div className="max-w-6xl mx-auto"><Card>
-          <CardHeader>
-            <CardTitle className="text-2xl">{t('home.chartTitle')}</CardTitle>
-            <p className="text-muted-foreground">{t('home.chartSubtitle')}</p>
-          </CardHeader>
-          <CardContent>
-            <div className="h-[400px]">
-              <ResponsiveContainer width="100%" height="100%">
-                <BarChart data={DEMO_CHART_DATA}>
-                  <CartesianGrid strokeDasharray="3 3" />
-                  <XAxis dataKey="ticker" />
-                  <YAxis />
-                  <Tooltip
-                    formatter={(value: number) => formatADA(value)}
-                    labelStyle={{ color: '#000' }}
-                  />
-                  <Bar dataKey="lostRewards" fill="hsl(var(--destructive))" radius={[8, 8, 0, 0]} />
-                </BarChart>
-              </ResponsiveContainer>
-            </div>
-          </CardContent>
-        </Card>
+        <div className="max-w-6xl mx-auto">
+          <Card>
+            <CardHeader>
+              <CardTitle className="text-2xl">{t('home.chartTitle')}</CardTitle>
+              <p className="text-muted-foreground">{t('home.chartSubtitle')}</p>
+            </CardHeader>
+            <CardContent>
+              <div className="h-[400px]">
+                <ResponsiveContainer width="100%" height="100%">
+                  <BarChart data={DEMO_CHART_DATA}>
+                    <CartesianGrid strokeDasharray="3 3" />
+                    <XAxis dataKey="ticker" />
+                    <YAxis />
+                    <Tooltip
+                      formatter={(value: number) => formatADA(value)}
+                      labelStyle={{ color: '#000' }}
+                    />
+                    <Bar dataKey="lostRewards" fill="hsl(var(--destructive))" radius={[8, 8, 0, 0]} />
+                  </BarChart>
+                </ResponsiveContainer>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
       </section>
 
       {/* Leaderboard Preview */}
