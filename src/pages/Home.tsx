@@ -100,11 +100,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Ad Banner Section - SINGLE */}
-      <section className="container mx-auto px-6">
-        <AdBanner />
-      </section>
-
       {/* Stats Grid */}
       <section className="container mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">

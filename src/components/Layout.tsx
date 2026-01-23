@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { Sparkles } from 'lucide-react';
 import Navigation from './Navigation';
+import AdBanner from './AdBanner';
 import Footer from './Footer';
 
 interface LayoutProps {
@@ -16,7 +17,7 @@ export default function Layout({ children }: LayoutProps) {
     <div className="min-h-screen flex flex-col">
       <Navigation />
       
-      {/* Advertise CTA Banner - ONDER navigation */}
+      {/* Advertise CTA Banner - Purple bar */}
       <div className="bg-gradient-to-r from-purple-600 to-purple-700 text-white">
         <div className="container mx-auto px-6 py-3">
           <Link
@@ -29,6 +30,13 @@ export default function Layout({ children }: LayoutProps) {
               {t('advertise.bannerButton')}
             </span>
           </Link>
+        </div>
+      </div>
+      
+      {/* Ad Banner Carousel - Dutchpool etc */}
+      <div className="bg-background border-b">
+        <div className="container mx-auto px-6 py-4">
+          <AdBanner />
         </div>
       </div>
       
