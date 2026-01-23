@@ -37,7 +37,13 @@
                         "stake":  "Stake",
                         "lostRewards":  "Verloren Beloningen",
                         "retiredEpoch":  "Gepensioneerd Epoch",
-                        "viewDetails":  "Details Bekijken"
+                        "viewDetails":  "Details Bekijken",
+                        "stats":  {
+                                      "affectedWallets":  "Getroffen Wallets",
+                                      "retiredPools":  "Gepensioneerde Pools",
+                                      "totalLocked":  "Totaal Vergrendeld"
+                                  },
+                        "wallets":  "wallets"
                     },
     "check":  {
                   "title":  "Controleer Je Stake",
@@ -62,19 +68,53 @@
                   "lostRewards":  "Geschatte Verloren Beloningen",
                   "recommendation":  "Aanbeveling",
                   "redelegateNow":  "Overdelegeer Nu",
-                  "checkAnother":  "Controleer Een Ander Adres"
+                  "checkAnother":  "Controleer Een Ander Adres",
+                  "form":  {
+                               "description":  "Voer je stake-adres in om te verifiëren dat je pool actief is",
+                               "title":  "Controleer de status van je pool"
+                           },
+                  "result":  {
+                                 "pool":  "Pool",
+                                 "active":  {
+                                                "title":  "✓ Actieve Pool"
+                                            },
+                                 "lastReward":  "Laatste Beloning",
+                                 "stake":  "Totale Stake"
+                             }
               },
     "about":  {
-                  "mission":  "Onze Missie",
-                  "problemTitle":  "Het Probleem",
-                  "problemDesc":  "Wanneer stake pools gepensioneerd worden, stoppen delegators met het verdienen van beloningen. Veel wallets blijven onbewust gedelegeerd aan gepensioneerde pools, wat resulteert in miljoenen ADA\u0027s aan verloren potentiële beloningen.",
-                  "solutionTitle":  "Onze Oplossing",
-                  "solutionDesc":  "ADAHealth biedt een transparant platform waar iedereen de status van hun gedelegeerde pool kan controleren. We gebruiken alleen publieke blockchain-data om een onafhankelijke bron van waarheid te bieden.",
-                  "independentTitle":  "Onafhankelijk \u0026 Transparant",
-                  "independentDesc":  "We zijn niet gelieerd aan enige stake pool operator of Cardano organisatie. Onze data komt rechtstreeks van de blockchain.",
-                  "ctaTitle":  "Controleer Nu je Stake",
-                  "ctaDesc":  "Verifieer dat je pool actief is en beloningen verdient",
-                  "ctaButton":  "Controleer Nu je Stake"
+                  "team":  {
+                               "title":  "Het Team",
+                               "description":  "ADAHealth is gebouwd en onderhouden door Dutchpool NLD, een onafhankelijke stake pool operator.",
+                               "contact":  "Contact opnemen"
+                           },
+                  "title":  "Over ADAHealth",
+                  "values":  {
+                                 "title":  "Onze Waarden",
+                                 "transparency":  {
+                                                      "description":  "Alle data komt rechtstreeks van de publieke blockchain.",
+                                                      "title":  "Transparantie"
+                                                  },
+                                 "community":  {
+                                                   "description":  "Gebouwd door en voor de Cardano-gemeenschap.",
+                                                   "title":  "Community-gedreven"
+                                               },
+                                 "accuracy":  {
+                                                  "description":  "Real-time data rechtstreeks van de blockchain.",
+                                                  "title":  "Nauwkeurigheid"
+                                              },
+                                 "independence":  {
+                                                      "description":  "Geen affiliatie met pools of organisaties.",
+                                                      "title":  "Onafhankelijkheid"
+                                                  }
+                             },
+                  "subtitle":  "Transparantie en bescherming voor Cardano delegators",
+                  "mission":  {
+                                  "title":  "Onze Missie",
+                                  "paragraph1":  "ADAHealth is opgericht met een eenvoudige missie: delegators beschermen door transparantie te bieden over gepensioneerde stake pools.",
+                                  "paragraph3":  "Wij geloven dat elke delegator toegang moet hebben tot accurate, actuele informatie over de status van hun pool.",
+                                  "paragraph2":  "Wanneer pools gepensioneerd worden, blijven veel wallets onbewust gedelegeerd, wat resulteert in miljoenen ADA\u0027s aan verloren beloningen."
+                              }
               },
     "wallet":  {
                    "connect":  "Wallet Verbinden",

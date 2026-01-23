@@ -37,7 +37,13 @@
                         "stake":  "Stake",
                         "lostRewards":  "Lost Rewards",
                         "retiredEpoch":  "Retired Epoch",
-                        "viewDetails":  "View Details"
+                        "viewDetails":  "View Details",
+                        "stats":  {
+                                      "affectedWallets":  "Affected Wallets",
+                                      "retiredPools":  "Retired Pools",
+                                      "totalLocked":  "Total Locked"
+                                  },
+                        "wallets":  "wallets"
                     },
     "check":  {
                   "title":  "Check Your Stake",
@@ -62,19 +68,53 @@
                   "lostRewards":  "Estimated Lost Rewards",
                   "recommendation":  "Recommendation",
                   "redelegateNow":  "Redelegate Now",
-                  "checkAnother":  "Check Another Address"
+                  "checkAnother":  "Check Another Address",
+                  "form":  {
+                               "description":  "Enter your stake address to verify your pool is active",
+                               "title":  "Check your pool status"
+                           },
+                  "result":  {
+                                 "pool":  "Pool",
+                                 "active":  {
+                                                "title":  "✓ Active Pool"
+                                            },
+                                 "lastReward":  "Last Reward",
+                                 "stake":  "Total Stake"
+                             }
               },
     "about":  {
-                  "mission":  "Our Mission",
-                  "problemTitle":  "The Problem",
-                  "problemDesc":  "When stake pools retire, delegators stop earning rewards. Many wallets remain unknowingly delegated to retired pools, resulting in millions of ADA in lost potential rewards.",
-                  "solutionTitle":  "Our Solution",
-                  "solutionDesc":  "ADAHealth provides a transparent platform where anyone can check the status of their delegated pool. We use only public blockchain data to provide an independent source of truth.",
-                  "independentTitle":  "Independent \u0026 Transparent",
-                  "independentDesc":  "We are not affiliated with any stake pool operator or Cardano organization. Our data comes directly from the blockchain.",
-                  "ctaTitle":  "Check Your Stake Now",
-                  "ctaDesc":  "Verify your pool is active and earning rewards",
-                  "ctaButton":  "Check Your Stake Now"
+                  "team":  {
+                               "title":  "The Team",
+                               "description":  "ADAHealth is built and maintained by Dutchpool NLD, an independent stake pool operator.",
+                               "contact":  "Get in touch"
+                           },
+                  "title":  "About ADAHealth",
+                  "values":  {
+                                 "title":  "Our Values",
+                                 "transparency":  {
+                                                      "description":  "All data comes directly from the public blockchain.",
+                                                      "title":  "Transparency"
+                                                  },
+                                 "community":  {
+                                                   "description":  "Built by and for the Cardano community.",
+                                                   "title":  "Community-driven"
+                                               },
+                                 "accuracy":  {
+                                                  "description":  "Real-time data directly from the blockchain.",
+                                                  "title":  "Accuracy"
+                                              },
+                                 "independence":  {
+                                                      "description":  "No affiliation with pools or organizations.",
+                                                      "title":  "Independence"
+                                                  }
+                             },
+                  "subtitle":  "Transparency and protection for Cardano delegators",
+                  "mission":  {
+                                  "title":  "Our Mission",
+                                  "paragraph1":  "ADAHealth was founded with a simple mission: protect delegators by providing transparency about retired stake pools.",
+                                  "paragraph3":  "We believe every delegator should have access to accurate, up-to-date information about their pool\u0027s status.",
+                                  "paragraph2":  "When pools retire, many wallets remain unknowingly delegated, resulting in millions of ADA in lost rewards."
+                              }
               },
     "wallet":  {
                    "connect":  "Connect Wallet",
