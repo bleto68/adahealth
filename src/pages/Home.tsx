@@ -6,7 +6,7 @@ import { ArrowRight, AlertTriangle, Users, TrendingDown, Shield, Sparkles } from
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { DEMO_GLOBAL_STATS, DEMO_CHART_DATA, DEMO_LEADERBOARD } from '@/lib/data';
+import { DEMO_GLOBAL_STATS, DEMO_CHART_DATA, DEMO_LEADERBOARD, type PoolData } from '@/lib/data';
 import { formatADA, formatNumber } from '@/lib/utils';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
 import AdBanner from '@/components/AdBanner';
@@ -38,7 +38,6 @@ export default function Home() {
 
   return (
     <div className="space-y-16 pb-16">
-      {/* Advertise CTA Banner - BOVENAAN */}
       <div className="bg-gradient-to-r from-purple-600 to-purple-700 text-white">
         <div className="container mx-auto px-6 py-3">
           <Link 
@@ -54,7 +53,6 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Hero Section */}
       <section className="pt-8">
         <div className="container mx-auto px-6">
           <motion.div
@@ -98,12 +96,10 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Ad Banner Section */}
       <section className="container mx-auto px-6">
         <AdBanner />
       </section>
 
-      {/* Stats Grid */}
       <section className="container mx-auto px-6">
         <motion.div
           initial="hidden"
@@ -159,12 +155,10 @@ export default function Home() {
         </motion.div>
       </section>
 
-      {/* Advertise CTA */}
       <section className="container mx-auto px-6">
         <AdvertiseCTA />
       </section>
 
-      {/* Chart */}
       <section className="container mx-auto px-6">
         <Card>
           <CardHeader>
@@ -184,7 +178,6 @@ export default function Home() {
         </Card>
       </section>
 
-      {/* Leaderboard Preview */}
       <section className="container mx-auto px-6">
         <div className="flex items-center justify-between mb-6">
           <h2 className="text-3xl font-bold">{t('home.topPools')}</h2>
@@ -194,7 +187,7 @@ export default function Home() {
         </div>
         
         <div className="space-y-4">
-          {DEMO_LEADERBOARD.slice(0, 5).map((pool, index) => (
+          {DEMO_LEADERBOARD.slice(0, 5).map((pool: PoolData, index: number) => (
             <Card key={pool.poolId} className="hover:shadow-lg transition-shadow cursor-pointer" onClick={() => navigate(`/pool/${pool.poolId}`)}>
               <CardContent className="flex items-center justify-between p-6">
                 <div className="flex items-center gap-4">
@@ -205,7 +198,7 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="text-right">
-                  <p className="text-lg font-semibold">{formatADA(pool.totalStake)}</p>
+                  <p className="text-lg font-semibold">{formatADA(pool.stake)}</p>
                   <p className="text-sm text-muted-foreground">{formatNumber(pool.delegators)} {t('leaderboard.delegators')}</p>
                 </div>
               </CardContent>
@@ -214,7 +207,6 @@ export default function Home() {
         </div>
       </section>
       
-      {/* Why This Matters */}
       <section className="py-16 bg-gradient-to-b from-blue-50/20 to-background">
         <div className="container mx-auto px-6">
           <div className="max-w-3xl mx-auto text-center">
