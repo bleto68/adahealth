@@ -60,58 +60,64 @@ export default function AdBanner() {
       <div className="p-6 md:p-8 relative">
         <div className="flex items-center justify-between gap-6">
           <div className="flex-1 min-w-0">
-            <h3 className="text-xl md:text-2xl font-bold text-white mb-2 truncate">
-              {currentAd.title}
-            </h3>
-            <p className="text-blue-100 text-sm md:text-base mb-4 line-clamp-2">
-              {currentAd.description}
-            </p>
-            <Button
-              asChild
-              size="lg"
-              className="bg-white text-blue-600 hover:bg-blue-50"
-            >
-              <a
-                href={currentAd.target_url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2"
-              >
-                Visit {currentAd.advertiser_name}
-                <ExternalLink className="w-4 h-4" />
-              </a>
-            </Button>
-          </div>
-
-          {currentAd.image_url && (
-            <div className="hidden md:block flex-shrink-0">
-              <img
-                src={currentAd.image_url}
-                alt={currentAd.title}
-                className="w-32 h-32 object-cover rounded-xl shadow-lg"
-              />
+            <div className="flex items-center gap-3 mb-2">
+              <span className="px-3 py-1 bg-white/20 rounded-full text-white font-mono text-sm font-semibold">
+                {currentAd.poolTicker}
+              </span>
             </div>
-          )}
+            <h3 className="text-xl md:text-2xl font-bold text-white mb-2">
+              {currentAd.poolName}
+            </h3>
+            <p className="text-blue-100 text-sm md:text-base mb-3">
+              {currentAd.tagline}
+            </p>
+            <div className="flex flex-wrap gap-2 mb-4">
+              {currentAd.features.map((feature, idx) => (
+                <span
+                  key={idx}
+                  className="px-2 py-1 bg-white/10 rounded text-white text-xs"
+                >
+                  {feature}
+                </span>
+              ))}
+            </div>
+            {currentAd.websiteUrl && (
+              <Button
+                asChild
+                size="lg"
+                className="bg-white text-blue-600 hover:bg-blue-50"
+              >
+                <a
+                  href={currentAd.websiteUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2"
+                >
+                  Visit Pool Website
+                  <ExternalLink className="w-4 h-4" />
+                </a>
+              </Button>
+            )}
+          </div>
         </div>
 
         {ads.length > 1 && (
-          <button
-            onClick={prevAd}
-            className="absolute left-2 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/30 rounded-full p-2 transition-colors"
-            aria-label="Previous ad"
-          >
-            <ChevronLeft className="w-5 h-5 text-white" />
-          </button>
-        )}
-
-        {ads.length > 1 && (
-          <button
-            onClick={nextAd}
-            className="absolute right-2 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/30 rounded-full p-2 transition-colors"
-            aria-label="Next ad"
-          >
-            <ChevronRight className="w-5 h-5 text-white" />
-          </button>
+          <>
+            <button
+              onClick={prevAd}
+              className="absolute left-2 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/30 rounded-full p-2 transition-colors"
+              aria-label="Previous ad"
+            >
+              <ChevronLeft className="w-5 h-5 text-white" />
+            </button>
+            <button
+              onClick={nextAd}
+              className="absolute right-2 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/30 rounded-full p-2 transition-colors"
+              aria-label="Next ad"
+            >
+              <ChevronRight className="w-5 h-5 text-white" />
+            </button>
+          </>
         )}
 
         {ads.length > 1 && (
@@ -130,7 +136,7 @@ export default function AdBanner() {
         )}
 
         <div className="text-center mt-2">
-          <span className="text-xs text-white/60">Sponsored</span>
+          <span className="text-xs text-white/60">Sponsored Pool</span>
         </div>
       </div>
     </div>
