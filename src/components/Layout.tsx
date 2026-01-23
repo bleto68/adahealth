@@ -14,7 +14,9 @@ export default function Layout({ children }: LayoutProps) {
   
   return (
     <div className="min-h-screen flex flex-col">
-      {/* Advertise CTA Banner - BOVEN navigation */}
+      <Navigation />
+      
+      {/* Advertise CTA Banner - ONDER navigation */}
       <div className="bg-gradient-to-r from-purple-600 to-purple-700 text-white">
         <div className="container mx-auto px-6 py-3">
           <Link
@@ -30,7 +32,6 @@ export default function Layout({ children }: LayoutProps) {
         </div>
       </div>
       
-      <Navigation />
       <main className="flex-1">
         {children}
       </main>
