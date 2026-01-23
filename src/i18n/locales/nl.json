@@ -69,7 +69,39 @@
   "about": {
     "mission": "Onze Missie",
     "problemDesc": "Wanneer stake pools gepensioneerd worden, stoppen delegators met het verdienen van beloningen. Veel wallets blijven onbewust gedelegeerd aan gepensioneerde pools, wat resulteert in miljoenen ADA's aan verloren potentiële beloningen.",
-    "ctaButton": "Controleer Nu je Stake"
+    "ctaButton": "Controleer Nu je Stake",
+    "title": "Over ADAHealth",
+    "subtitle": "Transparantie en bescherming voor Cardano delegators",
+    "mission": {
+      "title": "Onze Missie",
+      "paragraph1": "ADAHealth is opgericht met een eenvoudige missie: delegators beschermen door transparantie te bieden over gepensioneerde stake pools.",
+      "paragraph2": "Wanneer pools gepensioneerd worden, blijven veel wallets onbewust gedelegeerd, wat resulteert in miljoenen ADA's aan verloren beloningen.",
+      "paragraph3": "Wij geloven dat elke delegator toegang moet hebben tot accurate, actuele informatie over de status van hun pool."
+    },
+    "values": {
+      "title": "Onze Waarden",
+      "transparency": {
+        "title": "Transparantie",
+        "description": "Alle data komt rechtstreeks van de publieke blockchain."
+      },
+      "community": {
+        "title": "Community-gedreven",
+        "description": "Gebouwd door en voor de Cardano-gemeenschap."
+      },
+      "accuracy": {
+        "title": "Nauwkeurigheid",
+        "description": "Real-time data rechtstreeks van de blockchain."
+      },
+      "independence": {
+        "title": "Onafhankelijkheid",
+        "description": "Geen affiliatie met pools of organisaties."
+      }
+    },
+    "team": {
+      "title": "Het Team",
+      "description": "ADAHealth is gebouwd en onderhouden door Dutchpool NLD, een onafhankelijke stake pool operator.",
+      "contact": "Contact opnemen"
+    }
   },
   "wallet": {
     "title": "Wallet Verbinden",
@@ -77,7 +109,8 @@
     "readOnly": "Alleen-lezen modus",
     "readOnlyDesc": "Verbind je wallet om je stake-adres automatisch te controleren",
     "demoMode": "Demo Modus",
-    "demoDesc": "Test de functionaliteit met demo wallets"
+    "demoDesc": "Test de functionaliteit met demo wallets",
+    "connect": "Wallet Verbinden"
   },
   "footer": {
     "tagline": "Cardano delegeerders beschermen door transparantie.",
@@ -90,76 +123,53 @@
     "terms": "Servicevoorwaarden"
   },
   "common": {
-    "viewDetails": "Details Bekijken",
-    "days": "dagen"
+    "viewDetails": "Details Bekijken"
   },
   "advertise": {
     "banner": "Groei je pool - Adverteer met ons",
-    "bannerButton": "Bekijk Prijzen"
-  },
-  "adPurchase": {
+    "bannerButton": "Bekijk Prijzen",
+    "ctaTitle": "Adverteer jouw Cardano stake pool op ADAHealth",
+    "ctaDesc": "Bereik actieve delegators die op zoek zijn naar betrouwbare pools.",
+    "ctaButton": "Bekijk advertentiepakketten",
     "title": "Adverteer je Cardano Pool",
     "subtitle": "Bereik duizenden actieve delegators die op zoek zijn naar betrouwbare pools",
-    "benefits": {
-      "title": "Waarom Adverteren op ADAHealth?",
-      "targeted": {
-        "title": "Gerichte Doelgroep",
-        "description": "Bereik delegators die actief zoeken naar betrouwbare pools"
-      },
-      "visibility": {
-        "title": "Prime Zichtbaarheid",
-        "description": "Je advertentie verschijnt op alle belangrijke pagina's"
-      },
-      "affordable": {
-        "title": "Betaalbare Prijzen",
-        "description": "Flexibele pakketten voor elke poolgrootte"
-      }
-    },
-    "form": {
-      "title": "Maak je Advertentie",
-      "description": "Vul de onderstaande gegevens in om je pool te promoten",
-      "poolTicker": "Pool Ticker",
-      "poolTickerPlaceholder": "bijv. NLD",
-      "poolName": "Pool Naam",
-      "poolNamePlaceholder": "bijv. Dutchpool",
-      "tagline": "Tagline",
-      "taglinePlaceholder": "bijv. Betrouwbare Cardano Staking",
-      "features": "Kenmerken (max 4)",
-      "featurePlaceholder": "bijv. 0% marge",
-      "addFeature": "Kenmerk Toevoegen",
-      "websiteUrl": "Website URL (optioneel)",
-      "websiteUrlPlaceholder": "https://jouwpool.nl",
-      "duration": "Duur",
-      "days": "dagen"
-    },
-    "pricing": {
-      "title": "Advertentieprijzen",
-      "days2": "2 Dagen",
-      "days7": "7 Dagen",
-      "days30": "30 Dagen",
-      "popular": "Populair",
-      "perDay": "per dag"
-    },
+    "pricing": "Advertentieprijzen",
+    "days2": "2 Dagen",
+    "days7": "7 Dagen",
+    "days30": "30 Dagen",
+    "popular": "Populair",
+    "adaPrice": "{{price}} ADA",
+    "perDay": "per dag",
+    "createAd": "Advertentie Maken",
+    "formTitle": "Maak je Advertentie",
+    "poolTicker": "Pool Ticker",
+    "poolTickerPlaceholder": "bijv. NLD",
+    "poolName": "Pool Naam",
+    "poolNamePlaceholder": "bijv. Dutchpool",
+    "tagline": "Tagline",
+    "taglinePlaceholder": "bijv. Betrouwbare Cardano Staking",
+    "features": "Kenmerken (max 4)",
+    "featurePlaceholder": "bijv. 0% marge",
+    "addFeature": "Kenmerk Toevoegen",
+    "websiteUrl": "Website URL (optioneel)",
+    "websiteUrlPlaceholder": "https://jouwpool.nl",
+    "duration": "Duur",
     "preview": "Voorbeeld",
     "summary": "Samenvatting",
     "totalCost": "Totale Kosten",
     "submit": "Doorgaan naar Betaling",
-    "payment": {
-      "title": "Betaling Afronden",
-      "instructions": "Stuur exact",
-      "to": "naar het volgende adres:",
-      "address": "Betaaladres",
-      "txHash": "Transactie Hash",
-      "txHashPlaceholder": "Plak hier je transactie hash",
-      "verify": "Betaling Verifiëren",
-      "back": "Terug naar Formulier"
-    },
-    "success": {
-      "title": "Betaling Ontvangen!",
-      "message": "Je advertentie is nu live op ADAHealth.io",
-      "details": "Je advertentie is zichtbaar voor duizenden delegators op de hele site.",
-      "viewAd": "Bekijk Live Advertenties",
-      "createAnother": "Nog Een Advertentie Maken"
-    }
+    "paymentTitle": "Betaling Afronden",
+    "paymentInstructions": "Stuur exact",
+    "paymentTo": "naar het volgende adres:",
+    "paymentAddress": "Betaaladres",
+    "txHash": "Transactie Hash",
+    "txHashPlaceholder": "Plak hier je transactie hash",
+    "verify": "Betaling Verifiëren",
+    "back": "Terug naar Formulier",
+    "successTitle": "Betaling Ontvangen!",
+    "successMessage": "Je advertentie is nu live op ADAHealth.io",
+    "successDetails": "Je advertentie is zichtbaar voor duizenden delegators op de hele site.",
+    "viewAd": "Bekijk Live Advertenties",
+    "createAnother": "Nog Een Advertentie Maken"
   }
 }

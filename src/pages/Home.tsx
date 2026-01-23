@@ -7,7 +7,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { DEMO_GLOBAL_STATS, DEMO_CHART_DATA, DEMO_LEADERBOARD } from '@/lib/data';
-import { formatAda, formatNumber } from '@/lib/utils';
+import { formatADA, formatNumber } from '@/lib/utils';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
 import AdBanner from '@/components/AdBanner';
 import AdvertiseCTA from '@/components/AdvertiseCTA';
@@ -68,7 +68,7 @@ export default function Home() {
 
             <motion.p variants={itemVariants} className="text-lg text-muted-foreground max-w-3xl mx-auto">
               {t('hero.description', {
-                ada: formatAda(DEMO_GLOBAL_STATS.totalStakeLost),
+                ada: formatADA(DEMO_GLOBAL_STATS.totalStakeLost),
                 wallets: formatNumber(DEMO_GLOBAL_STATS.affectedWallets)
               })}
             </motion.p>
@@ -115,7 +115,7 @@ export default function Home() {
             </CardHeader>
             <CardContent>
               <div className="text-3xl font-bold text-destructive">
-                {formatAda(DEMO_GLOBAL_STATS.totalStakeLost)}
+                {formatADA(DEMO_GLOBAL_STATS.totalStakeLost)}
               </div>
               <p className="text-xs text-muted-foreground mt-1">
                 {t('stats.totalStake')}
@@ -175,7 +175,7 @@ export default function Home() {
                   <XAxis dataKey="ticker" />
                   <YAxis />
                   <Tooltip
-                    formatter={(value: number) => formatAda(value)}
+                    formatter={(value: number) => formatADA(value)}
                     labelStyle={{ color: '#000' }}
                   />
                   <Bar dataKey="lostRewards" fill="hsl(var(--destructive))" radius={[8, 8, 0, 0]} />
@@ -215,7 +215,7 @@ export default function Home() {
                 <div className="space-y-2">
                   <div className="flex justify-between text-sm">
                     <span className="text-muted-foreground">{t('leaderboard.lostRewards')}</span>
-                    <span className="font-bold text-destructive">{formatAda(pool.lostRewards)}</span>
+                    <span className="font-bold text-destructive">{formatADA(pool.lostRewards)}</span>
                   </div>
                   <div className="flex justify-between text-sm">
                     <span className="text-muted-foreground">{t('leaderboard.delegators')}</span>
