@@ -39,7 +39,12 @@
     "lostRewards": "Lost Rewards",
     "retiredEpoch": "Retired Epoch",
     "viewDetails": "View Details",
-    "wallets": "wallets"
+    "wallets": "wallets",
+    "stats": {
+      "totalLocked": "Total Locked",
+      "affectedWallets": "Affected Wallets",
+      "retiredPools": "Retired Pools"
+    }
   },
   "check": {
     "title": "Check Your Stake",
@@ -64,16 +69,57 @@
     "lostRewards": "Estimated Lost Rewards",
     "recommendation": "Recommendation",
     "redelegateNow": "Redelegate Now",
-    "checkAnother": "Check Another Address"
+    "checkAnother": "Check Another Address",
+    "form": {
+      "title": "Check your pool status",
+      "description": "Enter your stake address to verify your pool is active",
+      "placeholder": "stake1u..."
+    }
   },
   "about": {
+    "title": "About ADAHealth",
+    "subtitle": "Transparency and protection for Cardano delegators",
     "mission": "Our Mission",
+    "missionDesc": "When stake pools retire, delegators stop earning rewards. Many wallets remain unknowingly delegated to retired pools, resulting in millions of ADA in lost potential rewards.",
     "problemDesc": "When stake pools retire, delegators stop earning rewards. Many wallets remain unknowingly delegated to retired pools, resulting in millions of ADA in lost potential rewards.",
-    "ctaButton": "Check Your Stake Now"
+    "ctaTitle": "Check Your Stake Now",
+    "ctaButton": "Check Your Stake Now",
+    "values": {
+      "title": "Our Values",
+      "transparency": {
+        "title": "Transparency",
+        "description": "All data comes directly from the public blockchain."
+      },
+      "independence": {
+        "title": "Independence",
+        "description": "No affiliation with any pools or organizations."
+      },
+      "community": {
+        "title": "Community-Driven",
+        "description": "Built by and for the Cardano community."
+      }
+    }
+  },
+  "poolDetail": {
+    "back": "Back to Leaderboard",
+    "stats": {
+      "locked": "Locked Stake",
+      "wallets": "Affected Wallets",
+      "retired": "Retired",
+      "lastEpoch": "Last Active Epoch"
+    },
+    "chart": {
+      "title": "Lost Rewards Over Time"
+    },
+    "warning": {
+      "title": "This pool is retired",
+      "description": "If you're delegated to this pool, you're not earning any rewards. Redelegate to an active pool to start earning again."
+    }
   },
   "wallet": {
     "title": "Connect Wallet",
     "select": "Select a wallet",
+    "connect": "Connect Wallet",
     "readOnly": "Read-only mode",
     "readOnlyDesc": "Connect your wallet to automatically check your stake address",
     "demoMode": "Demo Mode",
@@ -90,18 +136,17 @@
     "terms": "Terms of Service"
   },
   "common": {
-    "viewDetails": "View Details",
-    "days": "days"
+    "viewDetails": "View Details"
   },
   "advertise": {
     "banner": "Grow your pool - Advertise with us",
-    "bannerButton": "View Pricing"
-  },
-  "adPurchase": {
+    "bannerButton": "View Pricing",
+    "ctaTitle": "Advertise your Cardano stake pool on ADAHealth",
+    "ctaDesc": "Reach active delegators looking for reliable pools.",
+    "ctaButton": "View advertising packages",
     "title": "Advertise your Cardano Pool",
     "subtitle": "Reach thousands of active delegators looking for reliable pools",
     "benefits": {
-      "title": "Why Advertise on ADAHealth?",
       "targeted": {
         "title": "Targeted Audience",
         "description": "Reach delegators actively searching for reliable pools"
@@ -118,48 +163,20 @@
     "form": {
       "title": "Create Your Ad",
       "description": "Fill in the details below to promote your pool",
-      "poolTicker": "Pool Ticker",
-      "poolTickerPlaceholder": "e.g. NLD",
-      "poolName": "Pool Name",
-      "poolNamePlaceholder": "e.g. Dutchpool",
-      "tagline": "Tagline",
-      "taglinePlaceholder": "e.g. Reliable Cardano Staking",
-      "features": "Features (max 4)",
-      "featurePlaceholder": "e.g. 0% margin",
-      "addFeature": "Add Feature",
-      "websiteUrl": "Website URL (optional)",
-      "websiteUrlPlaceholder": "https://yourpool.com",
+      "adTitle": "Ad Title",
+      "adTitlePlaceholder": "e.g. Dutchpool NLD",
+      "description": "Description",
+      "descriptionPlaceholder": "Short description of your pool",
+      "url": "Website URL",
+      "image": "Image",
+      "imageHint": "Recommended: 1200x630px",
+      "budget": "Budget",
+      "budgetHint": "In ADA",
       "duration": "Duration",
-      "days": "days"
-    },
-    "pricing": {
-      "title": "Advertising Pricing",
-      "days2": "2 Days",
-      "days7": "7 Days",
-      "days30": "30 Days",
-      "popular": "Popular",
-      "perDay": "per day"
-    },
-    "preview": "Preview",
-    "summary": "Summary",
-    "totalCost": "Total Cost",
-    "submit": "Proceed to Payment",
-    "payment": {
-      "title": "Complete Payment",
-      "instructions": "Send exactly",
-      "to": "to the following address:",
-      "address": "Payment Address",
-      "txHash": "Transaction Hash",
-      "txHashPlaceholder": "Paste your transaction hash here",
-      "verify": "Verify Payment",
-      "back": "Back to Form"
-    },
-    "success": {
-      "title": "Payment Received!",
-      "message": "Your ad is now live on ADAHealth.io",
-      "details": "Your ad is visible to thousands of delegators across the site.",
-      "viewAd": "View Live Ads",
-      "createAnother": "Create Another Ad"
+      "days": "days",
+      "estimate": "Estimated Cost",
+      "estimateDescription": "Based on your budget and duration",
+      "submit": "Submit"
     }
   }
 }
