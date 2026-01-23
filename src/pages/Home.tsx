@@ -116,7 +116,7 @@ export default function Home() {
                 {t('stats.totalStake')}
               </p>
             </CardContent>
-          </Card>
+          </Card></div></Card>
 
           <Card className="border-orange-500/50 bg-orange-500/5">
             <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
@@ -157,7 +157,7 @@ export default function Home() {
 
       {/* Chart Section */}
       <section className="container mx-auto px-6">
-        <Card>
+        <div className="max-w-6xl mx-auto"><Card>
           <CardHeader>
             <CardTitle className="text-2xl">{t('home.chartTitle')}</CardTitle>
             <p className="text-muted-foreground">{t('home.chartSubtitle')}</p>
