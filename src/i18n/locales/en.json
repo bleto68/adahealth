@@ -1,193 +1,244 @@
-﻿{
-    "nav":  {
-                "home":  "Home",
-                "check":  "Check",
-                "leaderboard":  "Leaderboard",
-                "about":  "About"
-            },
-    "hero":  {
-                 "badge":  "Independent Transparency Platform",
-                 "title":  "Protect your Cardano rewards",
-                 "subtitle":  "Expose retired stake pools costing delegators millions",
-                 "description":  "Over {{ada}} is currently delegated to retired pools. More than {{wallets}} unknowingly earn zero rewards. ADAHealth provides transparency using only public on-chain data.",
-                 "placeholder":  "Enter your stake address (stake1...)",
-                 "button":  "Check",
-                 "trustLine":  "Independent. Transparent. Based on public blockchain data."
-             },
-    "stats":  {
-                  "lostRewards":  "Lost Rewards",
-                  "affectedWallets":  "Affected Wallets",
-                  "retiredPools":  "Retired Pools",
-                  "totalStake":  "Total stake in retired pools",
-                  "activeUsers":  "Wallets earning zero rewards",
-                  "poolsRetired":  "Pools no longer producing blocks"
-              },
-    "home":  {
-                 "topPools":  "Top Retired Pools",
-                 "viewAll":  "View All",
-                 "chartTitle":  "Top 10 Retired Pools by Lost Rewards",
-                 "chartSubtitle":  "Top retired pools ranked by estimated lost rewards"
-             },
-    "leaderboard":  {
-                        "title":  "Retired Pools Leaderboard",
-                        "subtitle":  "Ranked by total lost rewards",
-                        "rank":  "Rank",
-                        "ticker":  "Ticker",
-                        "name":  "Pool Name",
-                        "delegators":  "Delegators",
-                        "stake":  "Stake",
-                        "lostRewards":  "Lost Rewards",
-                        "retiredEpoch":  "Retired Epoch",
-                        "viewDetails":  "View Details",
-                        "wallets":  "wallets",
-                        "stats":  {
-                                      "totalLocked":  "Total Locked",
-                                      "affectedWallets":  "Affected Wallets",
-                                      "retiredPools":  "Retired Pools"
-                                  }
-                    },
-    "check":  {
-                  "title":  "Check Your Stake",
-                  "subtitle":  "Verify your pool is active and earning rewards",
-                  "placeholder":  "Enter your stake address (stake1...)",
-                  "button":  "Check",
-                  "loading":  "Checking...",
-                  "errorTitle":  "Error",
-                  "invalidAddress":  "Invalid stake address format",
-                  "notFound":  "Stake address not found",
-                  "activeTitle":  "Active Pool",
-                  "activeMessage":  "Your stake is earning rewards!",
-                  "retiredTitle":  "Retired Pool",
-                  "retiredMessage":  "Your pool is retired and not earning rewards",
-                  "poolName":  "Pool Name",
-                  "ticker":  "Ticker",
-                  "status":  "Status",
-                  "delegators":  "Delegators",
-                  "stake":  "Stake",
-                  "roa":  "ROA",
-                  "retiredEpoch":  "Retired Epoch",
-                  "lostRewards":  "Estimated Lost Rewards",
-                  "recommendation":  "Recommendation",
-                  "redelegateNow":  "Redelegate Now",
-                  "checkAnother":  "Check Another Address",
-                  "form":  {
-                               "title":  "Check your pool status",
-                               "description":  "Enter your stake address to verify your pool is active",
-                               "placeholder":  "stake1u..."
-                           },
-                  "result":  {
-                                 "active":  {
-                                                "title":  "✓ Active Pool"
-                                            },
-                                 "retired":  {
-                                                 "title":  "⚠ Retired Pool",
-                                                 "warning":  "Your pool is retired and not earning rewards"
-                                             },
-                                 "pool":  "Pool",
-                                 "stake":  "Total Stake",
-                                 "lastReward":  "Last Reward"
-                             }
-              },
-    "about":  {
-                  "title":  "About ADAHealth",
-                  "subtitle":  "Transparency and protection for Cardano delegators",
-                  "mission":  "Our Mission",
-                  "missionDesc":  "When stake pools retire, delegators stop earning rewards. Many wallets remain unknowingly delegated to retired pools, resulting in millions of ADA in lost potential rewards.",
-                  "problemDesc":  "When stake pools retire, delegators stop earning rewards. Many wallets remain unknowingly delegated to retired pools, resulting in millions of ADA in lost potential rewards.",
-                  "ctaTitle":  "Check Your Stake Now",
-                  "ctaButton":  "Check Your Stake Now",
-                  "values":  {
-                                 "title":  "Our Values",
-                                 "transparency":  {
-                                                      "title":  "Transparency",
-                                                      "description":  "All data comes directly from the public blockchain."
-                                                  },
-                                 "independence":  {
-                                                      "title":  "Independence",
-                                                      "description":  "No affiliation with any pools or organizations."
-                                                  },
-                                 "community":  {
-                                                   "title":  "Community-Driven",
-                                                   "description":  "Built by and for the Cardano community."
-                                               }
-                             }
-              },
-    "poolDetail":  {
-                       "back":  "Back to Leaderboard",
-                       "stats":  {
-                                     "locked":  "Locked Stake",
-                                     "wallets":  "Affected Wallets",
-                                     "retired":  "Retired",
-                                     "lastEpoch":  "Last Active Epoch"
-                                 },
-                       "chart":  {
-                                     "title":  "Lost Rewards Over Time"
-                                 },
-                       "warning":  {
-                                       "title":  "This pool is retired",
-                                       "description":  "If you\u0027re delegated to this pool, you\u0027re not earning any rewards. Redelegate to an active pool to start earning again."
-                                   }
-                   },
-    "wallet":  {
-                   "title":  "Connect Wallet",
-                   "select":  "Select a wallet",
-                   "connect":  "Connect Wallet",
-                   "readOnly":  "Read-only mode",
-                   "readOnlyDesc":  "Connect your wallet to automatically check your stake address",
-                   "demoMode":  "Demo Mode",
-                   "demoDesc":  "Test the functionality with demo wallets"
-               },
-    "footer":  {
-                   "tagline":  "Protecting Cardano delegators through transparency.",
-                   "useful":  "Useful Links",
-                   "builtBy":  "Built By",
-                   "builtByDesc":  "ADAHealth is built and maintained by an independent Cardano stake pool operator (Dutchpool NLD), with a mission to improve transparency and protect delegators.",
-                   "dutchpoolInfo":  "Dutchpool NLD is a trusted Cardano stake pool. Pool ticker: NLD. 0% lifetime margin - Consistent performance",
-                   "allRights":  "All data sourced from public blockchain information.",
-                   "privacy":  "Privacy Policy",
-                   "terms":  "Terms of Service"
-               },
-    "common":  {
-                   "viewDetails":  "View Details"
-               },
-    "advertise":  {
-                      "banner":  "Grow your pool - Advertise with us",
-                      "bannerButton":  "View Pricing",
-                      "ctaTitle":  "Advertise your Cardano stake pool on ADAHealth",
-                      "ctaDesc":  "Reach active delegators looking for reliable pools.",
-                      "ctaButton":  "View advertising packages",
-                      "title":  "Advertise your Cardano Pool",
-                      "subtitle":  "Reach thousands of active delegators looking for reliable pools",
-                      "benefits":  {
-                                       "targeted":  {
-                                                        "title":  "Targeted Audience",
-                                                        "description":  "Reach delegators actively searching for reliable pools"
-                                                    },
-                                       "visibility":  {
-                                                          "title":  "Prime Visibility",
-                                                          "description":  "Your ad appears across all major pages"
-                                                      },
-                                       "affordable":  {
-                                                          "title":  "Affordable Pricing",
-                                                          "description":  "Flexible packages for every pool size"
-                                                      }
-                                   },
-                      "form":  {
-                                   "title":  "Create Your Ad",
-                                   "description":  "Description",
-                                   "adTitle":  "Ad Title",
-                                   "adTitlePlaceholder":  "e.g. Dutchpool NLD",
-                                   "descriptionPlaceholder":  "Short description of your pool",
-                                   "url":  "Website URL",
-                                   "image":  "Image",
-                                   "imageHint":  "Recommended: 1200x630px",
-                                   "budget":  "Budget",
-                                   "budgetHint":  "In ADA",
-                                   "duration":  "Duration",
-                                   "days":  "days",
-                                   "estimate":  "Estimated Cost",
-                                   "estimateDescription":  "Based on your budget and duration",
-                                   "submit":  "Submit"
-                               }
-                  }
+{
+  "nav": {
+    "home": "Home",
+    "check": "Check",
+    "leaderboard": "Leaderboard",
+    "about": "About"
+  },
+  "hero": {
+    "badge": "Independent Transparency Platform",
+    "title": "Protect your Cardano rewards",
+    "subtitle": "Expose retired stake pools costing delegators millions",
+    "description": "Over {{ada}} is currently delegated to retired pools. More than {{wallets}} unknowingly earn zero rewards. ADAHealth provides transparency using only public on-chain data.",
+    "placeholder": "Enter your stake address (stake1...)",
+    "button": "Check",
+    "trustLine": "Independent. Transparent. Based on public blockchain data."
+  },
+  "stats": {
+    "lostRewards": "Lost Rewards",
+    "affectedWallets": "Affected Wallets",
+    "retiredPools": "Retired Pools",
+    "totalStake": "Total stake in retired pools",
+    "activeUsers": "Wallets earning zero rewards",
+    "poolsRetired": "Pools no longer producing blocks"
+  },
+  "home": {
+    "topPools": "Top Retired Pools",
+    "viewAll": "View All",
+    "chartTitle": "Top 10 Retired Pools by Lost Rewards",
+    "chartSubtitle": "Top retired pools ranked by estimated lost rewards"
+  },
+  "leaderboard": {
+    "title": "Retired Pools Leaderboard",
+    "subtitle": "Ranked by total lost rewards",
+    "rank": "Rank",
+    "ticker": "Ticker",
+    "name": "Pool Name",
+    "delegators": "Delegators",
+    "stake": "Stake",
+    "lostRewards": "Lost Rewards",
+    "retiredEpoch": "Retired Epoch",
+    "viewDetails": "View Details",
+    "wallets": "wallets",
+    "stats": {
+      "totalLocked": "Total Locked",
+      "affectedWallets": "Affected Wallets",
+      "retiredPools": "Retired Pools"
+    }
+  },
+  "check": {
+    "title": "Check Your Stake",
+    "subtitle": "Verify your pool is active and earning rewards",
+    "placeholder": "Enter your stake address (stake1...)",
+    "button": "Check",
+    "loading": "Checking...",
+    "errorTitle": "Error",
+    "invalidAddress": "Invalid stake address format",
+    "notFound": "Stake address not found",
+    "activeTitle": "Active Pool",
+    "activeMessage": "Your stake is earning rewards!",
+    "retiredTitle": "Retired Pool",
+    "retiredMessage": "Your pool is retired and not earning rewards",
+    "poolName": "Pool Name",
+    "ticker": "Ticker",
+    "status": "Status",
+    "delegators": "Delegators",
+    "stake": "Stake",
+    "roa": "ROA",
+    "retiredEpoch": "Retired Epoch",
+    "lostRewards": "Estimated Lost Rewards",
+    "recommendation": "Recommendation",
+    "redelegateNow": "Redelegate Now",
+    "checkAnother": "Check Another Address",
+    "form": {
+      "title": "Check your pool status",
+      "description": "Enter your stake address to verify your pool is active",
+      "placeholder": "stake1u..."
+    },
+    "result": {
+      "active": {
+        "title": "✓ Active Pool"
+      },
+      "retired": {
+        "title": "⚠ Retired Pool",
+        "warning": "Your pool is retired and not earning rewards"
+      },
+      "pool": "Pool",
+      "stake": "Total Stake",
+      "lastReward": "Last Reward"
+    }
+  },
+  "about": {
+    "title": "About ADAHealth",
+    "subtitle": "Transparency and protection for Cardano delegators",
+    "mission": "Our Mission",
+    "missionDesc": "When stake pools retire, delegators stop earning rewards. Many wallets remain unknowingly delegated to retired pools, resulting in millions of ADA in lost potential rewards.",
+    "problemDesc": "When stake pools retire, delegators stop earning rewards. Many wallets remain unknowingly delegated to retired pools, resulting in millions of ADA in lost potential rewards.",
+    "ctaTitle": "Check Your Stake Now",
+    "ctaButton": "Check Your Stake Now",
+    "mission": {
+      "title": "Our Mission",
+      "paragraph1": "ADAHealth was founded with a simple mission: protect delegators by providing transparency about retired stake pools.",
+      "paragraph2": "When pools retire, many wallets remain unknowingly delegated, resulting in millions of ADA in lost rewards.",
+      "paragraph3": "We believe every delegator should have access to accurate, up-to-date information about their pool's status."
+    },
+    "values": {
+      "title": "Our Values",
+      "transparency": {
+        "title": "Transparency",
+        "description": "All data comes directly from the public blockchain."
+      },
+      "independence": {
+        "title": "Independence",
+        "description": "No affiliation with any pools or organizations."
+      },
+      "community": {
+        "title": "Community-Driven",
+        "description": "Built by and for the Cardano community."
+      },
+      "accuracy": {
+        "title": "Accuracy",
+        "description": "Real-time data directly from the blockchain."
+      }
+    },
+    "team": {
+      "title": "The Team",
+      "description": "ADAHealth is built and maintained by Dutchpool NLD, an independent stake pool operator.",
+      "contact": "Get in Touch"
+    }
+  },
+  "poolDetail": {
+    "back": "Back to Leaderboard",
+    "stats": {
+      "locked": "Locked Stake",
+      "wallets": "Affected Wallets",
+      "retired": "Retired",
+      "lastEpoch": "Last Active Epoch"
+    },
+    "chart": {
+      "title": "Lost Rewards Over Time"
+    },
+    "warning": {
+      "title": "This pool is retired",
+      "description": "If you're delegated to this pool, you're not earning any rewards. Redelegate to an active pool to start earning again."
+    }
+  },
+  "wallet": {
+    "title": "Connect Wallet",
+    "select": "Select a wallet",
+    "connect": "Connect Wallet",
+    "readOnly": "Read-only mode",
+    "readOnlyDesc": "Connect your wallet to automatically check your stake address",
+    "demoMode": "Demo Mode",
+    "demoDesc": "Test the functionality with demo wallets"
+  },
+  "footer": {
+    "tagline": "Protecting Cardano delegators through transparency.",
+    "useful": "Useful Links",
+    "builtBy": "Built By",
+    "builtByDesc": "ADAHealth is built and maintained by an independent Cardano stake pool operator (Dutchpool NLD), with a mission to improve transparency and protect delegators.",
+    "dutchpoolInfo": "Dutchpool NLD is a trusted Cardano stake pool. Pool ticker: NLD. 0% lifetime margin - Consistent performance",
+    "allRights": "All data sourced from public blockchain information.",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service"
+  },
+  "common": {
+    "viewDetails": "View Details",
+    "days": "days",
+    "backToHome": "Back to Home"
+  },
+  "advertise": {
+    "banner": "Grow your pool - Advertise with us",
+    "bannerButton": "View Pricing",
+    "ctaTitle": "Advertise your Cardano stake pool on ADAHealth",
+    "ctaDesc": "Reach active delegators looking for reliable pools.",
+    "ctaButton": "View advertising packages"
+  },
+  "adPurchase": {
+    "title": "Advertise Your Stake Pool",
+    "subtitle": "Reach Thousands of Active Delegators",
+    "description": "Premium ad space on ADAHealth.io. Showcase your pool to users actively searching for reliable stake pools.",
+    "benefits": {
+      "reach": {
+        "title": "Massive Reach",
+        "description": "Be seen by thousands of active Cardano delegators"
+      },
+      "targeted": {
+        "title": "Targeted Audience",
+        "description": "Reach users actively searching for pools"
+      },
+      "instant": {
+        "title": "Instant Activation",
+        "description": "Your ad goes live immediately after payment"
+      }
+    },
+    "pricing": {
+      "title": "Simple, Transparent Pricing",
+      "days2": {
+        "title": "2 Days",
+        "subtitle": "Quick promotion",
+        "price": "100"
+      },
+      "days7": {
+        "title": "7 Days",
+        "subtitle": "Best value",
+        "price": "300",
+        "popular": "Most Popular"
+      },
+      "days30": {
+        "title": "30 Days",
+        "subtitle": "Maximum visibility",
+        "price": "1000"
+      },
+      "select": "Select {{days}} Days"
+    },
+    "form": {
+      "title": "Create Your Ad",
+      "poolTicker": "Pool Ticker",
+      "poolTickerPlaceholder": "e.g. POOL",
+      "poolName": "Pool Name",
+      "poolNameRequired": "Pool Name *",
+      "tagline": "Tagline",
+      "taglineRequired": "Tagline *",
+      "taglinePlaceholder": "Short catchy description (max 50 chars)",
+      "features": "Key Features",
+      "featuresRequired": "Key Features *",
+      "featurePlaceholder": "Add Feature",
+      "featureHint": "Add 1-5 key features (e.g., low fees, high uptime, eco-friendly)",
+      "addFeature": "Add Feature",
+      "websiteUrl": "Website URL",
+      "websiteUrlRequired": "Website URL *",
+      "websiteUrlPlaceholder": "https://yourpool.com"
+    },
+    "summary": {
+      "title": "Summary",
+      "duration": "Duration",
+      "durationValue": "{{days}} days",
+      "totalCost": "Total Cost",
+      "totalCostValue": "{{price}} ADA"
+    },
+    "duration": "Duration",
+    "totalCost": "Total Cost",
+    "submit": "Continue to Payment"
+  }
 }
